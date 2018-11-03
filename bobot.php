@@ -9,13 +9,13 @@ $koneksi->konek();
 // Header
 include('header.php'); 
 	// Var judul = Calon Siswa
-	$content_title="Kriteria Penilaian";
+	$content_title="Bobot Kriteria";
 	// AksiTambah
 	$action="Tambah ";
 	// var judul modal=Tambah CalonSiswa
 	$modal_title=$action.$content_title;
 
 // contentsiswa   
-include('kriteria/content.php'); 
+include('bobot/content.php'); 
 // footer
 include('footer.php'); ?>
