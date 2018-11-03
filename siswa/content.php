@@ -19,25 +19,51 @@
 		 	  	else:
 		 	  		include('siswa/table.php');
 		 	  	endif;
-		 	 	// tabel siswa
-	 	  	if(!empty($_GET['a'])):
-	 	  			$a=base64_decode($_GET['a']);
-	 	  			echo $a;
-	 	  		switch ($a) {
-	 	  			case 'nilai':
-	 	  				# code.
-	 	  			// echo "nilai";
-	 	  			include('nilai/nilaisiswa.php');
+			 	if(!empty($_GET['a'])):
+		 	  			$a=base64_decode($_GET['a']);
+		 	  			echo $a;
+		 	  		switch ($a) {
+		 	  			case 'nilai':
+	 	  				
+	 	  					include('nilai/nilaisiswa.php');
 	 	  				break;
-	 	  			
-	 	  			default:
-	 	  				# code...
-	 	  				break;
-	 	  		}
-		 	  	
-		 	else:
+		 	  			case 'edit':
+		 	  				// echo $a;
+		 	  				include('siswa/edit.php');
+		 	  			break;
+		 	  			case 'save':
+		 	  				// echo $a;
+		 	  				if(!empty($_POST['id_siswa'])):
+					 	  		$idsiswa=base64_decode($_POST['id_siswa']);
+					 	  		
+					 	  		// print_r(base64_decode($id));
+		 	  					echo "update";
+					 	  		include('siswa/update.php');
+					 	  	else:
+		 	  					echo "save";
+					 	  		include('siswa/savenew.php');
+					 	  	endif;
+							
+		 	  			break;
+		 	  			case 'delete':
+		 	  				// echo $a;
+		 	  				if(!empty($_GET['id_siswa'])):
+					 	  		$idsiswa=base64_decode($_GET['id_siswa']);
+					 	  		// print_r(base64_decode($id));
+					 	  		include('siswa/delete.php');
+					 	  	else:
+					 	  		//include('nilai/savenew.php');
+					 	  	endif;
+		 	  				break;
+		 	  			default:
+		 	  				# code...
+		 	  				break;
+		 	  		}
+			 	  	
+			 	else:
 
-		 	endif;
+			 	endif;
+	 	  	
 		 	  	?>
 	 	</div>
  	</div>
