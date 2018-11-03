@@ -1,4 +1,4 @@
-<?php define('baseurl','http://localhost/ppdb2018/'); ?>
+<?php define('baseurl','http://ppdb.id/'); ?>
 <!DOCTYPE html>
 	<html lang="">
 		<head>
@@ -19,21 +19,27 @@
       <div class="navbar-collapse collapse" id="navbarsExample03" style="">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
+      
           <li class="nav-item dropdown show">
             <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Master</a>
             <div class="dropdown-menu " aria-labelledby="dropdown03">
               <a class="dropdown-item" href="<?= baseurl.'siswa.php' ?>">Siswa</a>
               <a class="dropdown-item" href="<?= baseurl.'nilai.php' ?>">Nilai Siswa</a>
               <a class="dropdown-item" href="<?= baseurl.'kriteria.php' ?>">Kriteria</a>
+              <a class="dropdown-item" href="<?= baseurl.'bobot.php' ?>">Bobot</a>
             </div>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#">Proses Fuzzy</a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Proses SAW</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hasil Penilaian FSAW</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
