@@ -1,5 +1,7 @@
-<form action="<?= baseurl.'nilai.php?a='.base64_encode("save"); ?>" method="post">
-<input type="hidden" name="id_siswa" value="<?= !empty($id)?base64_decode($id):''; ?>">
+
+<form action="<?= baseurl.'nilai.php?a='.("save"); ?>" method="post">
+
+<input type="hidden" name="id_siswa" value="<?= !empty($id)?($id):''; ?>">
 <tr>
 							<td style="padding: 3px;"><input type="text" class="form-control text-center" style="padding:10px;font-size: 12pt;width:100%;height:40px" placeholder="0" name="nilai_un" value="<?= !empty($row['nilai_un'])?($row['nilai_un']):'';?>"></td>
 							<td style="padding: 3px;"><input type="text" class="form-control text-center" style="padding:10px;font-size: 12pt;width:100%;height:40px" placeholder="0" name="ipa1" value="<?= !empty($row['ipa1'])?($row['ipa1']):'';?>"></td>

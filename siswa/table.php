@@ -37,7 +37,7 @@
 							<td><?= !empty($row['tgl_lahir'])&&!empty($row['tmp_lahir'])?$row['tmp_lahir'].", ".$row['tgl_lahir']:''; ?></td>	
 							<td>
 								<div class="btn-group" role="group" aria-label="Basic example">
-									<a href="<?= !empty($row['id_siswa'])?"siswa.php?id=".base64_encode($row['id_siswa']):''; ?>" class="btn btn-primary"><i class=""></i> Nilai</button>
+									<a href="<?= !empty($row['id_siswa'])?"siswa.php?id=".($row['id_siswa']):''; ?>" class="btn btn-primary"><i class=""></i> Nilai</button>
 									<a type="button" class="btn btn-info">Edit</a>
 									<button type="button" class="btn btn-danger">Hapus</button>
 								</div>

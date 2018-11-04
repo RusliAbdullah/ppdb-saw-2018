@@ -30,7 +30,8 @@ Nilai Siswa
 				<?php
 				
 					if(isset($_GET['id'])):
-						$sql="select * from nilai a join siswa b on a.id_siswa=b.id_siswa where a.id_siswa=".base64_decode($id);
+						// $sql="select * from nilai a join siswa b on a.id_siswa=b.id_siswa where a.id_siswa=".base64_decode($id);
+						$sql="select * from nilai a join siswa b on a.id_siswa=b.id_siswa where a.id_siswa=".($id);
 					else:
 						$sql="select * from nilai a join siswa b on a.id_siswa=b.id_siswa";// where a.id_siswa=".base64_decode($id);
 					endif;
@@ -58,12 +59,12 @@ Nilai Siswa
 							<td><?= !empty($row['bing3'])?($row['bing3']):'';?></td>
 							<td><?= !empty($row['bing4'])?($row['bing4']):'';?></td>
 							<td><?= !empty($row['bing5'])?($row['bing5']):'';?></td>
-							<td><?= !empty($row['id_siswa'])?"<a class='btn btn-success btn-sm' href='".baseurl."nilai.php?id=".base64_encode($row['id_siswa'])."&a=".base64_encode("edit")."'>Edit Nilai</a>":'';?></td>
+							<td><?= !empty($row['id_siswa'])?"<a class='btn btn-success btn-sm' href='".baseurl."nilai.php?id=".($row['id_siswa'])."&a=".("edit")."'>Edit Nilai</a>":'';?></td>
 						</tr>
 					<?php $i++;endwhile;
 					else: 
 
-					include('form.php')?>
+					include('form.php');?>
 
 				<?php endif;
 				 //include('list-nilai.php'); 
