@@ -2,12 +2,14 @@
 <?php if(!isset($_GET['a']))://if(!empty($_GET['a'])&&!base64_decode($_GET['a'])=="nilai"): ?>
 	<p>
 		
-	<a class="btn btn-info btn-md" href="<?php echo 'siswa.php?a='.base64_encode('nilai').'&id='.$id ?>">Nilai</a>
+	<!-- <a class="btn btn-info btn-md" href="<?php //echo 'siswa.php?a='.base64_encode('nilai').'&id='.$id ?>">Nilai</a> -->
+	<a class="btn btn-info btn-md" href="<?php echo 'siswa.php?a='.('nilai').'&id='.$id ?>">Nilai</a>
 	</p>
 <?php else: ?>
 	<p>
 		
-	<a class="btn btn-info btn-md" href="<?php echo 'siswa.php?a='.base64_encode('edit').'&id='.$id ?>">Edit Data Calon Siswa</a>
+	<!-- <a class="btn btn-info btn-md" href="<?php //echo 'siswa.php?a='.base64_encode('edit').'&id='.$id ?>">Edit Data Calon Siswa</a> -->
+	<a class="btn btn-info btn-md" href="<?php echo 'siswa.php?a='.('edit').'&id='.$id ?>">Edit Data Calon Siswa</a>
 	</p>
 <?php endif; ?>
 <table class="table table-hover table-condensed table-striped table-bordered">
@@ -15,7 +17,8 @@
 					<tbody>
 						
 					<?php 
-					$sql="select * from siswa where id_siswa=".base64_decode($id);
+					$sql="select * from siswa where id_siswa=".($id);
+					// $sql="select * from siswa where id_siswa=".base64_decode($id);
 					// print_r($sql);
 
 					// query sql dari tabel siswa

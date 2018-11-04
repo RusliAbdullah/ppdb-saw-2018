@@ -20,7 +20,8 @@
 		 	  		include('siswa/table.php');
 		 	  	endif;
 			 	if(!empty($_GET['a'])):
-		 	  			$a=base64_decode($_GET['a']);
+		 	  			// $a=base64_decode($_GET['a']);
+		 	  			$a=($_GET['a']);
 		 	  			echo $a;
 		 	  		switch ($a) {
 		 	  			case 'nilai':
@@ -34,7 +35,8 @@
 		 	  			case 'save':
 		 	  				// echo $a;
 		 	  				if(!empty($_POST['id_siswa'])):
-					 	  		$idsiswa=base64_decode($_POST['id_siswa']);
+					 	  		// $idsiswa=base64_decode($_POST['id_siswa']);
+					 	  		$idsiswa=($_POST['id_siswa']);
 					 	  		
 					 	  		// print_r(base64_decode($id));
 		 	  					echo "update";
@@ -48,7 +50,8 @@
 		 	  			case 'delete':
 		 	  				// echo $a;
 		 	  				if(!empty($_GET['id_siswa'])):
-					 	  		$idsiswa=base64_decode($_GET['id_siswa']);
+					 	  		// $idsiswa=base64_decode($_GET['id_siswa']);
+					 	  		$idsiswa=($_GET['id_siswa']);
 					 	  		// print_r(base64_decode($id));
 					 	  		include('siswa/delete.php');
 					 	  	else:

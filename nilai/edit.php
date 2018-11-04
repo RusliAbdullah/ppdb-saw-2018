@@ -1,13 +1,14 @@
 
 	<?php 
 	if(isset($_GET['id'])):
-						$sql="select * from nilai a join siswa b on a.id_siswa=b.id_siswa where a.id_siswa=".base64_decode($id);
+						// $sql="select * from nilai a join siswa b on a.id_siswa=b.id_siswa where a.id_siswa=".base64_decode($id);
+						$sql="select * from nilai a join siswa b on a.id_siswa=b.id_siswa where a.id_siswa=".($id);
 					endif;
 					// print_r($sql);
 					$query=$koneksi->query($sql);// or die(error_log($koneksi->error()));
 					$i=1;
 	 ?>
-<form action="<?= baseurl.'nilai.php?a='.base64_encode("save"); ?>" method="post">
+<form action="<?= baseurl.'nilai.php?a='.("save"); ?>" method="post">
 <table class="table table-hover table-condensed table-striped table-bordered datatables">
 				<thead>
 					<tr>
@@ -39,8 +40,9 @@
 				<?php
 					
 					while($row=$query->fetch_assoc()):?>
-						<input type="hidden" name="id_siswa" value="<?= !empty($row['id_siswa'])?base64_encode($row['id_siswa']):''; ?>">
-						<input type="hidden" name="id_nilai" value="<?= !empty($row['id_nilai'])?base64_encode($row['id_nilai']):''; ?>">
+						<input type="hidden" name="id_siswa" value="<?= !empty($row['id_siswa'])?($row['id_siswa']):''; ?>">
+					
+						<input type="hidden" name="id_nilai" value="<?= !empty($row['id_nilai'])?($row['id_nilai']):''; ?>">
 						<tr>
 							<td style="padding: 3px;"><input type="text" class="form-control text-center" style="padding:10px;font-size: 12pt;width:100%;height:40px" placeholder="0" name="nilai_un" value="<?= !empty($row['nilai_un'])?($row['nilai_un']):'';?>"></td>
 							<td style="padding: 3px;"><input type="text" class="form-control text-center" style="padding:10px;font-size: 12pt;width:100%;height:40px" placeholder="0" name="ipa1" value="<?= !empty($row['ipa1'])?($row['ipa1']):'';?>"></td>

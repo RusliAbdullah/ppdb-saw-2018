@@ -1,7 +1,8 @@
 <form>
 	<?php 
 	if(isset($_GET['id'])):
-						$sql="select * from nilai a join siswa b on a.id_siswa=b.id_siswa where a.id_siswa=".base64_decode($id);
+						// $sql="select * from nilai a join siswa b on a.id_siswa=b.id_siswa where a.id_siswa=".base64_decode($id);
+						$sql="select * from nilai a join siswa b on a.id_siswa=b.id_siswa where a.id_siswa=".($id);
 					endif;
 					// print_r($sql);
 					$query=$koneksi->query($sql);// or die(error_log($koneksi->error()));
