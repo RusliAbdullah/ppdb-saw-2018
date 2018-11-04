@@ -33,7 +33,15 @@
  	<div class="row">
 	 	<div class="col">
 	 		<h3>Data <?= !empty($content_title)?$content_title:'Judul';  ?></h3>
-	 	  	
+	 	  	<?php 
+	 	  	if(!empty($_GET['id'])):
+		 	  		$id=$_GET['id'];
+		 	  		// print_r(base64_decode($id));
+		 	  		include('kriteria/detail.php');
+		 	  	else:
+		 	  		include('kriteria/table.php');
+		 	  	endif;
+	 	  	 ?>
 	 	</div>
  	</div>
  </div>
