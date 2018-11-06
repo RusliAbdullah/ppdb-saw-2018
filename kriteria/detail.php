@@ -1,51 +1,54 @@
+ <?php if (!defined('baseurl')) exit('No direct script access allowed');?>
 
-<?php if(!isset($_GET['a']))://if(!empty($_GET['a'])&&!base64_decode($_GET['a'])=="nilai"): ?>
-	<p>
+<p>
+	<div class="btn-group">
 		
-	<!-- <a class="btn btn-info btn-md" href="<?php //echo 'kriteria.php?a='.base64_encode('nilai').'&id='.$id ?>">Nilai</a> -->
-	<a class="btn btn-info btn-md" href="<?php echo 'kriteria.php?a='.('bobot').'&id='.$id ?>">Bobot</a>
-	</p>
-<?php else: ?>
-	<p>
-		
-	<!-- <a class="btn btn-info btn-md" href="<?php //echo 'kriteria.php?a='.base64_encode('edit').'&id='.$id ?>">Edit Data Calon Kriteria</a> -->
-	<a class="btn btn-info btn-md" href="<?php echo 'kriteria.php?a='.('edit').'&id='.$id ?>">Edit Data Calon Kriteria</a>
-	</p>
-<?php endif; ?>
+    <a class="btn btn-success btn-md" href="siswa.php">Tabel Siswa</a>
+    <a class="btn btn-primary btn-md" href="<?php echo 'bobot.php?a='.('edit').'&id='.$id ?>">Edit Nilai</a>
+	</div>
+</p>
+
 <table class="table table-hover table-condensed table-striped table-bordered">
-				
-					<tbody>
-						
-					<?php 
-					$sql="select * from kriteria where id_kriteria=".($id);
-					$query=$koneksi->query($sql);
-					// selama dalam variabel query terdapat data, maka tampilkan datanya
-					$i=1;
-					while($row=$query->fetch_assoc()):
-					// inisialisasi variabel i adalah 1
-					?>
-						<tr><th>No.</th>
-							<td><?= $i; ?></td>	
-							<th>ID</th>
-							<td><?= !empty($row['id_kriteria'])?$row['id_kriteria']:''; ?></td>	
-						</tr>
-						<tr>
-							
-							<th>Nama Kriteria</th>
-							<td><?= !empty($row['nama_kriteria'])?$row['nama_kriteria']:''; ?></td>	
-							<th>Bobot Masuk</th>
-							<td><?= !empty($row['bobot_masuk'])?$row['bobot_masuk']:''; ?></td>	
-						</tr>
-						<tr>
-							
-							<th>Bobot IPA</th>
-							<td><?= !empty($row['bobot_ipa'])?$row['bobot_ipa']:''; ?></td>	
-							<th>Bobot IPS</th>
-							<td><?= !empty($row['bobot_ips'])?$row['bobot_ips']:''; ?></td>	
-
-								
-													</tr>
-					<?php $i++;endwhile; //akhir while?>
-					</tbody>
-				</table>
-				
+    <tbody>
+        <?php 
+			
+			// query sql dari tabel siswa
+			$query=$koneksi->query($sql);
+			// selama dalam variabel query terdapat data, maka tampilkan datanya
+			$i=1;
+			while($row=$query->fetch_assoc()):
+			// inisialisasi variabel i adalah 1
+		?>
+        <tr>
+            <th>No.</th>
+            <td>
+                <?= $i; ?>
+            </td>
+            <th>ID</th>
+            <td>
+                <?= !empty($row['id_siswa'])?$row['id_siswa']:''; ?>
+            </td>
+        </tr>
+        <tr>
+            <th>Nama Siswa</th>
+            <td>
+                <?= !empty($row['nama_siswa'])?$row['nama_siswa']:''; ?>
+            </td>
+            <th>Asal Sekolah</th>
+            <td>
+                <?= !empty($row['asal_sekolah'])?$row['asal_sekolah']:''; ?>
+            </td>
+        </tr>
+        <tr>
+            <th>J.Kelamin</th>
+            <td>
+                <?= !empty($row['j_kelamin'])?$row['j_kelamin']:''; ?>
+            </td>
+            <th>TTL</th>
+            <td>
+                <?= !empty($row['tgl_lahir'])&&!empty($row['tmp_lahir'])?$row['tmp_lahir'].", ".$row['tgl_lahir']:''; ?>
+            </td>
+        </tr>
+        <?php $i++;endwhile; //akhir while?>
+    </tbody>
+</table>
