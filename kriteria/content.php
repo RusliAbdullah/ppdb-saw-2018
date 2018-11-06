@@ -1,7 +1,6 @@
  <div class="container bg-white">
  	<div class="row">
- 	<div class="col text-center"><h1><?= !empty($content_title)?$content_title:'Judul';  ?></h1></div>
- 		       
+ 		<div class="col text-center"><h1><?= !empty($content_title)?$content_title:'Judul';  ?></h1></div> 
  	</div>
  	<div class="row ">
  		<div class="col text-right">
@@ -17,6 +16,7 @@
  					if($msg['st']==1):?>
  						<div class="alert alert-success" role="alert">
  							<strong>Well done!</strong> You successfully read this important alert message.
+ 						</div>
  						<?php
  					else:?>
  						<div class="alert alert-warning" role="alert">
@@ -29,6 +29,7 @@
  			else:
  			endif;
  		 ?>
+ 		
  	</div>
  	<div class="row">
 	 	<div class="col">

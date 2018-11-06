@@ -20,7 +20,7 @@
 								<input name="nama_kriteria" type="text" class="form-control" id="nama_kriteria" required placeholder="Masukkan Nama Kriteria" value="<?php echo (!empty($nama_kriteria)?$nama_kriteria:''); ?>">
 							</div>
 						</div>
-						
+						<?php  ?>
 				</div>
 				<div class="row">
 						
@@ -28,7 +28,7 @@
 						
 						
 						<div class="form-group">
-							<label for="bobot_masuk">Bobot Penerimaan Calon</label>
+							<label for="bobot_masuk">Bobot Penerimaan Calon Siswa</label>
 							<input name="bobot_masuk" type="text" class="form-control" id="bobot_masuk" required placeholder="Masukkan Tempat Lahir" value="<?php echo (!empty($bobot_masuk)?$bobot_masuk:''); ?>">
 						</div>
 					</div>
