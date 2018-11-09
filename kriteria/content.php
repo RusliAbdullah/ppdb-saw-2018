@@ -31,7 +31,7 @@
 	 	  		 		break;
 	 	  		 	// fungsi save
 	 	  		 	case 'save':
-	 	  				$id_kriteria=!empty($_GET['id_kriteria'])?htmlspeciid_nilailchars(trim($_GET['id_kriteria'])):'';
+	 	  				$id_kriteria=!empty($_GET['id_kriteria'])?htmlspecialchars(trim($_GET['id_kriteria'])):'';
 	 	  				// fungsi update
 	 	  				if(!empty($id_kriteria)||$id_kriteria!=null){
 	 	  		 			echo "update:".$id;

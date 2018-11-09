@@ -31,42 +31,56 @@
 	 	  		 		break;
 	 	  		 	// fungsi save
 	 	  		 	case 'save':
-	 	  				$id_siswa=!empty($_GET['id_siswa'])?htmlspeciid_nilailchars(trim($_GET['id_siswa'])):'';
+	 	  				$id_siswa=!empty($_POST['id_siswa'])?htmlspecialchars(trim($_POST['id_siswa'])):'';
+	 	  				$id_nilai=!empty($_POST['id_nilai'])?htmlspecialchars(trim($_POST['id_nilai'])):'';
 	 	  				// fungsi update
 	 	  				if(!empty($id_siswa)||$id_siswa!=null){
-	 	  		 			echo "update:".$id;
+	 	  					if(!empty($id_nilai)||$id_nilai!=null){
+	 	  		 				// echo "update:".$id_siswa;
+	 	  		 				include 'update.php';
+	 	  					}else{
+
+	 	  		 				// echo "savenew	:".$id_siswa;
+	 	  		 				include 'savenew.php';
+	 	  					}
 	 	  				}else{
 	 	  					// fungsi save new
-	 	  		 			echo "save:".$id;
+	 	  					echo "else";
 	 	  				}
-
-	 	  		 		break;
+	 	  				include 'alert.php';
+	 	  				
+	 	  		 	break;
 	 	  		 		// fungsi delete
 	 	  		 	case 'del':
+	 	  		 		$msg=array(
+							'msg'=>"Data nilai ditemukan, apakah Anda akan menghapus data ini?",
+							'st'=>0,
+							'panel'=>'warning',
+							'title'=>'Peringatan! ',
+							'tipe'=>'dialog',
+							'yes'=>baseurl."siswa.php?a=del&j=ya&id=".$id,
+							'no'=>baseurl."siswa.php"
+							);
 	 	  		 		// echo "delete:".$id;?>
-	 	  		 		<div class="alert alert-danger text-center">
-	 	  		 			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	 	  		 			<p><strong>Perhatian!</strong> Apakah Anda yakin akan menghapus data ini?</p>
-	 	  		 			<div class="btn-group">
-	 	  		 				<a href="<?php echo baseurl."siswa.php?a=del&j=ya&id=".$id; ?>" class="btn btn-sm btn-success">Left</a>
-	 	  		 				<a href="<?php echo baseurl."siswa.php"; ?>" class="btn btn-danger btn-sm"  aria-hidden="true">Tidak</a>
-	 	  		 			</div>
-	 	  		 		</div>
+	 	  		 		
 	 	  		 		<?php
 	 	  					// $id_siswa=!empty($_GET['id_siswa'])?htmlspeciid_nilailchars(trim($_GET['id_siswa'])):'';
 	 	  					$jawab=!empty($_GET['j'])?htmlspecialchars(trim($_GET['j'])):'';
 	 	  					if((!empty($id)||$id!=null)&&(!empty($jawab)&&$jawab==='ya')):
-	 	  						echo "yakin hapus";
+	 	  						include 'nilai/delete.php';
+	 	  						// echo "yakin hapus";
 	 	  					else:
 	 	  						echo "tidak yakin hapus";
 	 	  					endif;
 
+	 	  				include 'alert.php';
 	 	  		 		break;
 	 	  		 	default:
 	 	  		 		break;
 	 	  		 	}
 	 	  		else: 
 					// $sql="select * from siswa";
+					
 	 	  			include('siswa/table.php');
 	 	  		endif;
 

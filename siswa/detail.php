@@ -8,7 +8,7 @@
 	</div>
 </p>
 
-<table class="table table-hover table-condensed table-striped table-bordered">
+<table class="table table-hover table-condensed table-striped table-borderless table-sm">
     <tbody>
         <?php 
 			

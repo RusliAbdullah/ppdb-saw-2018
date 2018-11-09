@@ -7,7 +7,12 @@
 			<meta name="description" content="">
 			
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			
+			<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <!-- Add Material CSS, replace Bootstrap CSS -->  
+      <link href="assets/css/material.min.css" rel="stylesheet">
+      <link href="assets/css/docs.min.css" rel="stylesheet">
 		</head>
 		<body>
 			<nav class="navbar navbar-expand-sm navbar-dark bg-dark">

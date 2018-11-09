@@ -6,7 +6,7 @@
         <?= !empty($content_title)?$action.$content_title:'Judul';  ?></button>
 </p>
 <!-- </div> -->
-<table class="table table-hover table-condensed table-striped table-bordered">
+<table class="table table-hover table-condensed table-striped table-borderless table-sm">
     <thead>
         <tr>
             <th>No.</th>

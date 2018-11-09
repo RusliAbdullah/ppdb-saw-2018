@@ -6,7 +6,7 @@
         <?= !empty($content_title)?$action.$content_title:'Judul';  ?></button>
 </p>
 <!-- </div> -->
-<table class="table table-hover table-condensed table-striped table-bordered">
+<table class="table table-hover table-condensed table-striped table-sm">
     <thead>
         <tr>
             <th>No.</th>
@@ -25,6 +25,7 @@
 					$query=$koneksi->query($sql);
 					// selama dalam variabel query terdapat data, maka tampilkan datanya
 					$i=1;
+                    $bobotmasuk=$bobotipa=$bobotips=0;
 					while($row=$query->fetch_assoc()):
 					// inisialisasi variabel i adalah 1
 					?>
@@ -32,23 +33,17 @@
             <td>
                 <?= $i; ?>
             </td>
-            <td>
-                <?= !empty($row['id_kriteria'])?$row['id_kriteria']:''; ?>
+            <td><?= !empty($row['id_kriteria'])?$row['id_kriteria']:''; ?>
             </td>
-            <td>
-                <?= !empty($row['kode_kriteria'])?$row['kode_kriteria']:''; ?>
+            <td><?= !empty($row['kode_kriteria'])?$row['kode_kriteria']:''; ?>
             </td>
-            <td>
-                <?= !empty($row['nama_kriteria'])?$row['nama_kriteria']:''; ?>
+            <td><?= !empty($row['nama_kriteria'])?$row['nama_kriteria']:''; ?>
             </td>
-            <td>
-                <?= !empty($row['bobot_masuk'])?$row['bobot_masuk']:''; ?>
+            <td><?= !empty($row['bobot_masuk'])?$row['bobot_masuk']:''; ?>
             </td>
-            <td>
-                <?= !empty($row['bobot_ipa'])?$row['bobot_ipa']:''; ?>
+            <td><?= !empty($row['bobot_ipa'])?$row['bobot_ipa']:''; ?>
             </td>
-            <td>
-                <?= !empty($row['bobot_ips'])?$row['bobot_ips']:''; ?>
+            <td><?= !empty($row['bobot_ips'])?$row['bobot_ips']:''; ?>
             </td>
            
             <td>
@@ -58,6 +53,21 @@
                 </div>
             </td>
         </tr>
-        <?php $i++;endwhile; //akhir while?>
+        <?php $i++;
+        $bobotmasuk=$bobotmasuk+$row['bobot_masuk'];
+        $bobotipa=$bobotipa+$row['bobot_ipa'];
+        $bobotips=$bobotips+$row['bobot_ips'];
+    endwhile; //akhir while?>
     </tbody>
+    <tfoot>
+        <tr>
+            
+            <th class="text-right" colspan="4">Total Nilai Bobot</th>
+            <th><?= !empty($bobotmasuk)?$bobotmasuk:'0'; ?></th>
+            <th><?= !empty($bobotipa)?$bobotipa:'0'; ?></th>
+            <th><?= !empty($bobotips)?$bobotips:'0'; ?></th>
+           
+            <th></th>
+        </tr>
+    </tfoot>
 </table>
