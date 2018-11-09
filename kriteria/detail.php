@@ -3,12 +3,12 @@
 <p>
 	<div class="btn-group">
 		
-    <a class="btn btn-success btn-md" href="siswa.php">Tabel Siswa</a>
-    <a class="btn btn-primary btn-md" href="<?php echo 'bobot.php?a='.('edit').'&id='.$id ?>">Edit Nilai</a>
+    <a class="btn btn-success btn-md" href="kriteria.php">Tabel Kriteria</a>
+    <a class="btn btn-primary btn-md" href="<?php echo 'bobot.php?a='.('edit').'&id='.$id ?>">Edit Bobot Kriteria</a>
 	</div>
 </p>
 
-<table class="table table-hover table-condensed table-striped table-bordered">
+<table class="table table-hover table-condensed table-striped table-sm">
     <tbody>
         <?php 
 			
@@ -20,34 +20,22 @@
 			// inisialisasi variabel i adalah 1
 		?>
         <tr>
-            <th>No.</th>
-            <td>
-                <?= $i; ?>
-            </td>
+       
             <th>ID</th>
-            <td>
-                <?= !empty($row['id_siswa'])?$row['id_siswa']:''; ?>
-            </td>
+            <td><?= !empty($row['id_kriteria'])?$row['id_kriteria']:''; ?></td>
         </tr>
         <tr>
-            <th>Nama Siswa</th>
-            <td>
-                <?= !empty($row['nama_siswa'])?$row['nama_siswa']:''; ?>
-            </td>
-            <th>Asal Sekolah</th>
-            <td>
-                <?= !empty($row['asal_sekolah'])?$row['asal_sekolah']:''; ?>
-            </td>
+            <th>Nama Kriteria</th>
+            <td><?= !empty($row['nama_kriteria'])?$row['nama_kriteria']:''; ?></td>
+            <th>Bobot Seleksi Masuk</th>
+            <td><?= !empty($row['bobot_masuk'])?$row['bobot_masuk']:''; ?></td>
         </tr>
         <tr>
-            <th>J.Kelamin</th>
-            <td>
-                <?= !empty($row['j_kelamin'])?$row['j_kelamin']:''; ?>
-            </td>
-            <th>TTL</th>
-            <td>
-                <?= !empty($row['tgl_lahir'])&&!empty($row['tmp_lahir'])?$row['tmp_lahir'].", ".$row['tgl_lahir']:''; ?>
-            </td>
+            <th>Bobot IPA</th>
+            <td><?= !empty($row['bobot_ipa'])?$row['bobot_ipa']:''; ?></td>
+            <th>Bobot IPS</th>
+            <td><?= !empty($row['bobot_ips'])?$row['bobot_ips']:''; ?></td>
+          
         </tr>
         <?php $i++;endwhile; //akhir while?>
     </tbody>
