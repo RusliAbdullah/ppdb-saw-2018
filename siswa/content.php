@@ -1,4 +1,8 @@
- <?php if (!defined('baseurl')) exit('No direct script access allowed');?>
+ <?php if (!defined('baseurl')) exit('No direct script access allowed');
+// define('TOKEN',date('Y-m-d H:s'));
+ $token=date('Y-m-d H:i:s');
+ ?>
+
  <div class="container bg-white" style="height: 100%;min-height: 624px;">
  	<div class="row">
  		<div class="col text-center"><h1><?= !empty($content_title)?$content_title:'Judul';  ?></h1></div>
@@ -17,17 +21,18 @@
 	 	  	if(isset($a)&&!empty($a)): 
 	 	  		if(isset($id)&&!empty($id)&&($id!=null)&&($id!=0)): 
 	 	  			$sql=$sql." where id_siswa=".($id);
-	 	  			include('siswa/detail.php');
 	 	  			
 	 	  			switch ($a) {
 	 	  			// fungsi nilai
 	 	  		 	case 'nilai':
-	 	  		 		echo "nilai:".$id;
+	 	  				include('siswa/detail.php');
+	 	  		 		// echo "nilai:".$id;
 	 	  		 		include 'nilai/detailnilai.php';
 	 	  		 		break;
 	 	  		 	// fungsi edit
 	 	  		 	case 'edit':
 	 	  		 		echo "edit:".$id;
+	 	  		 		include 'siswa/edit.php';
 	 	  		 		break;
 	 	  		 	// fungsi save
 	 	  		 	case 'save':
@@ -43,23 +48,30 @@
 	 	  		 		break;
 	 	  		 		// fungsi delete
 	 	  		 	case 'del':
+	 	  				include('siswa/detail.php');
+	 	  		 		$msg=array(
+							'msg'=>"Data calon siswa ditemukan, apakah Anda akan menghapus data ini?",
+							'st'=>0,
+							'panel'=>'warning',
+							'title'=>'Peringatan! ',
+							'tipe'=>'dialog',
+							'yes'=>baseurl."siswa.php?a=del&j=ya&id=".$id."&token=".$token,
+							'no'=>baseurl."siswa.php"
+							);
 	 	  		 		// echo "delete:".$id;?>
-	 	  		 		<div class="alert alert-danger text-center">
-	 	  		 			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	 	  		 			<p><strong>Perhatian!</strong> Apakah Anda yakin akan menghapus data ini?</p>
-	 	  		 			<div class="btn-group">
-	 	  		 				<a href="<?php echo baseurl."siswa.php?a=del&j=ya&id=".$id; ?>" class="btn btn-sm btn-success">Left</a>
-	 	  		 				<a href="<?php echo baseurl."siswa.php"; ?>" class="btn btn-danger btn-sm"  aria-hidden="true">Tidak</a>
-	 	  		 			</div>
-	 	  		 		</div>
+	 	  		 		
 	 	  		 		<?php
 	 	  					// $id_siswa=!empty($_GET['id_siswa'])?htmlspeciid_nilailchars(trim($_GET['id_siswa'])):'';
 	 	  					$jawab=!empty($_GET['j'])?htmlspecialchars(trim($_GET['j'])):'';
 	 	  					if((!empty($id)||$id!=null)&&(!empty($jawab)&&$jawab==='ya')):
-	 	  						echo "yakin hapus";
+	 	  						// print_r($token);
+	 	  						include 'siswa/delete.php';
+	 	  						// echo "yakin hapus";
 	 	  					else:
-	 	  						echo "tidak yakin hapus";
+	 	  						// echo "tidak yakin hapus";
 	 	  					endif;
+
+	 	  				include 'alert.php';
 
 	 	  		 		break;
 	 	  		 	default:
