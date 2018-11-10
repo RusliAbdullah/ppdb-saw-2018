@@ -2,10 +2,99 @@
 
  				<div class="container jumbotron" style="height: 100%;min-height: 624px;">
  					<h1 class="display-3"><?= !empty($content_title)?$content_title:'Judul';  ?></h1>
- 					<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+ 					<p class="lead">Penentuan Bobot Nilai untuk setiap kriteria, khususnya C1, C2, C3</p>
+ 					<p>Range nilai NUN didasarkan pada data hasil UN secara nasional, khusus untuk Kep. Tidore pada tahun 2017, bersumber pada Data Kemdikbud</p>
+ 					<p>Berdasarkan Data tersebut, dipilih Rata-rata NUN tertinggi yaitu pada SMPN 3 Tidore, dan Rata-rata NUN terendah pada SMPN 26 Tidore </p>
  					<hr class="m-y-md">
- 					<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+ 					<div class="row">
+ 					<div class="col-6">
+ 						
+ 					<p><h4>BOBOT NUN BAHASA</h4>
+						Jika N>=63, maka bobot adalah 1<br>
+						Jika N>=60 dan N<63, maka bobot adalah 0.75<br>
+						Jika N>=55 dan N<60, maka bobot adalah 0.5<br>
+						Jika N<55, maka bobot adalah 0.25 </p>
+						<!-- <pre> -->
+						<code>
+						<strong>$N = nilai input C2(NUN BAHASA INDONESIA)</strong><br>
+						=IF($N>=63,1,<br>
+								IF(AND($N<63,$N>=60),0.75,<br>
+									IF(AND($N<60,$N>=55),0.5,<br>
+										IF(AND($N<55,$N>=53),0.25,0)<br>
+									)
+								)
+							)
+						</code>
+						<!-- </pre> -->
+						<hr>
+ 					</div>
+ 					<div class="col-6">
+ 						
+						<p><h4>BOBOT NUN BAHASA INGGRIS</h4>
+						Jika N>=62, maka bobot adalah 1<br>
+						Jika N>=55 dan N<62, maka bobot adalah 0.75<br>
+						Jika N>=40 dan N<55, maka bobot adalah 0.5<br>
+						Jika N<40, maka bobot adalah 0.25 </p>
+						<!-- <pre> -->
+						<code>
+						<strong>$N = nilai input C2(NUN BAHASA INGGRIS)</strong><br>
+						=IF($N>=62,1,<br>
+								IF(AND($N<62,$N>=55),0.75,<br>
+									IF(AND($N<55,$N>=40),0.5,<br>
+										IF(AND($N<40,$N>=37),0.25,0)<br>
+									)
+								)
+							)
+						</code>
+						<!-- </pre> -->
+						<hr>
+ 					</div>
+ 					<div class="col">
+ 						
+ 					
+						<p><h4>BOBOT NUN MATEMATIKA</h4>
+						Jika N>=68, maka bobot adalah 1<br>
+						Jika N>=55 dan N<68, maka bobot adalah 0.75<br>
+						Jika N>=40 dan N<55, maka bobot adalah 0.5<br>
+						Jika N<40, maka bobot adalah 0.25 </p>
+						<!-- <pre> -->
+						<code>
+						<strong>$N = nilai input C1(NUN MATEMATIKA)</strong><br>
+						=IF($N>=68,1,<br>
+								IF(AND($N<68,$N>=55),0.75,<br>
+									IF(AND($N<55,$N>=40),0.5,<br>
+										IF(AND($N<40,$N>=32),0.25,0)<br>
+									)
+								)
+							)
+						</code>
+						<!-- </pre> -->
+						<hr>
+					</div>
+					<div class="col">
+						
+					
+						<p><h4>BOBOT NUN IPA</h4>
+						Jika N>=70, maka bobot adalah 1<br>
+						Jika N>=55 dan N<70, maka bobot adalah 0.75<br>
+						Jika N>=40 dan N<55, maka bobot adalah 0.5<br>
+						Jika N<40, maka bobot adalah 0.25 </p>
+						<!-- <pre> -->
+						<code>
+						<strong>$N = nilai input C3(NUN IPA)</strong><br>
+						=IF($N>=70,1,<br>
+								IF(AND($N<70,$N>=55),0.75,<br>
+									IF(AND($N<55,$N>=40),0.5,<br>
+										IF(AND($N<40,$N>=35),0.25,0)<br>
+									)
+								)
+							)
+						</code>
+						<!-- </pre> -->
+						<hr></div>
+						</div>
  					<p class="lead">
  						<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
  					</p>
  				</div>
+
