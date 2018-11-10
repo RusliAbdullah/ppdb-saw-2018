@@ -40,10 +40,6 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Proses Fuzzy</a>
-            
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="<?= baseurl.'saw.php' ?>">Proses SAW</a>
           </li>
           <li class="nav-item">
