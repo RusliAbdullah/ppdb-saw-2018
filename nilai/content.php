@@ -13,10 +13,10 @@
 	 	  	$a=!empty($_GET['a'])?htmlspecialchars(trim($_GET['a'])):'';
 	 	  	$id=!empty($_GET['id'])?htmlspecialchars(trim($_GET['id'])):'';
 	 	  
-	 	  	$sql="select * from siswa";
+	 	  	$sql="select * from siswa a join nilai b on a.id_siswa=b.id_siswa";
 	 	  	if(isset($a)&&!empty($a)): 
 	 	  		if(isset($id)&&!empty($id)&&($id!=null)&&($id!=0)): 
-	 	  			$sql=$sql." where id_siswa=".($id);
+	 	  			$sql=$sql." where a.id_siswa=".($id);
 	 	  			include('siswa/detail.php');
 	 	  			
 	 	  			switch ($a) {
@@ -86,7 +86,8 @@
 
 	 	  	else: 
 	 	  		// $sql="select * from siswa";
-	 	  		include('siswa/table.php');
+	 	  		echo "tabel";
+	 	  		include('nilai/table.php');
 			endif; ?>
 
 	 	</div>
