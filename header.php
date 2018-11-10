@@ -27,21 +27,24 @@
             <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
           </li>
       
-          <li class="nav-item dropdown show">
-            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Master</a>
-            <div class="dropdown-menu " aria-labelledby="dropdown03">
-              <a class="dropdown-item" href="<?= baseurl.'siswa.php' ?>">Siswa</a>
+      
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Master
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+               <a class="dropdown-item" href="<?= baseurl.'siswa.php' ?>">Siswa</a>
               <a class="dropdown-item" href="<?= baseurl.'nilai.php' ?>">Nilai Siswa</a>
               <a class="dropdown-item" href="<?= baseurl.'kriteria.php' ?>">Kriteria</a>
               <a class="dropdown-item" href="<?= baseurl.'bobot.php' ?>">Bobot</a>
             </div>
-          </li> 
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Proses Fuzzy</a>
             
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Proses SAW</a>
+            <a class="nav-link" href="<?= baseurl.'saw.php' ?>">Proses SAW</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Hasil Penilaian FSAW</a>

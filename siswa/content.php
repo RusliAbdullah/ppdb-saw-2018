@@ -31,20 +31,25 @@
 	 	  		 		break;
 	 	  		 	// fungsi edit
 	 	  		 	case 'edit':
-	 	  		 		echo "edit:".$id;
+	 	  		 		// echo "edit:".$id;
 	 	  		 		include 'siswa/edit.php';
 	 	  		 		break;
 	 	  		 	// fungsi save
 	 	  		 	case 'save':
-	 	  				$id_siswa=!empty($_GET['id_siswa'])?htmlspeciid_nilailchars(trim($_GET['id_siswa'])):'';
+	 	  				$id_siswa=!empty($_POST['id_siswa'])?htmlspecialchars(trim($_POST['id_siswa'])):'';
 	 	  				// fungsi update
-	 	  				if(!empty($id_siswa)||$id_siswa!=null){
-	 	  		 			echo "update:".$id;
-	 	  				}else{
-	 	  					// fungsi save new
-	 	  		 			echo "save:".$id;
-	 	  				}
+	 	  				// if(!empty($id)||$id!=null):
+	 	  					if(!empty($id_siswa)||$id_siswa!=null){
+	 	  		 				// echo "update:".$id;
+	 	  		 				include('siswa/update.php');
+	 	  					}else{
+	 	  		 				include('siswa/savenew.php');
+	 	  						// fungsi save new
+	 	  		 				// echo "save:".$id;
+	 	  					}
 
+	 	  				// endif;
+	 	  					include('alert.php');
 	 	  		 		break;
 	 	  		 		// fungsi delete
 	 	  		 	case 'del':

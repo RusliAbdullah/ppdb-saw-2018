@@ -1,6 +1,7 @@
  <?php if (!defined('baseurl')) exit('No direct script access allowed');?>
 <!-- edit nilai -->
 	<?php 
+	// $sql=""
 	// print_r($_GET['id']);
 	if(!empty($_GET['id'])):
 		$id=$_GET['id'];

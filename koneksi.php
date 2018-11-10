@@ -9,7 +9,7 @@ class Koneksi {
 		$host='localhost';
 		$user='root';
 		$pass='';
-		$db='fuzzyhibrid';
+		$db='ppdb2018';
 
 		$konek = mysqli_connect($host, $user, $pass, $db);
 		// $result = mysqli_query($konek, $query);

@@ -2,9 +2,10 @@
 $sql="select * from siswa where id_siswa=".$id;
 
 $query=$koneksi->query($sql);
-print_r($query);
+// print_r($query);
 if($query->num_rows==1){
 	$data=$query->fetch_array();
-	print_r($data);
+	// print_r($data);
+	$data['action']='siswa.php?a=save&id='.$id;
+	include 'siswa/form.php';
 }
-include 'siswa/form.php';
