@@ -13,7 +13,8 @@
 						Jika N>=63, maka bobot adalah 1<br>
 						Jika N>=60 dan N<63, maka bobot adalah 0.75<br>
 						Jika N>=55 dan N<60, maka bobot adalah 0.5<br>
-						Jika N<55, maka bobot adalah 0.25 </p>
+						Jika N>=53 dan N<55, maka bobot adalah 0.25 <br>
+						selain range tersebut maka bobot adalah Nol </p>
 						<!-- <pre> -->
 						<code>
 						<strong>$N = nilai input C2(NUN BAHASA INDONESIA)</strong><br>
@@ -34,7 +35,8 @@
 						Jika N>=62, maka bobot adalah 1<br>
 						Jika N>=55 dan N<62, maka bobot adalah 0.75<br>
 						Jika N>=40 dan N<55, maka bobot adalah 0.5<br>
-						Jika N<40, maka bobot adalah 0.25 </p>
+						Jika N>=37 dan N<40, maka bobot adalah 0.25 <br>
+						selain range tersebut maka bobot adalah Nol </p>
 						<!-- <pre> -->
 						<code>
 						<strong>$N = nilai input C2(NUN BAHASA INGGRIS)</strong><br>
@@ -56,7 +58,8 @@
 						Jika N>=68, maka bobot adalah 1<br>
 						Jika N>=55 dan N<68, maka bobot adalah 0.75<br>
 						Jika N>=40 dan N<55, maka bobot adalah 0.5<br>
-						Jika N<40, maka bobot adalah 0.25 </p>
+						Jika N>=32 dan N<40, maka bobot adalah 0.25 <br>
+						selain range tersebut maka bobot adalah Nol </p>
 						<!-- <pre> -->
 						<code>
 						<strong>$N = nilai input C1(NUN MATEMATIKA)</strong><br>
@@ -78,7 +81,8 @@
 						Jika N>=70, maka bobot adalah 1<br>
 						Jika N>=55 dan N<70, maka bobot adalah 0.75<br>
 						Jika N>=40 dan N<55, maka bobot adalah 0.5<br>
-						Jika N<40, maka bobot adalah 0.25 </p>
+						Jika N>=35 dan N<40, maka bobot adalah 0.25<br>
+						selain range tersebut maka bobot adalah Nol </p>
 						<!-- <pre> -->
 						<code>
 						<strong>$N = nilai input C3(NUN IPA)</strong><br>
@@ -86,6 +90,28 @@
 								IF(AND($N<70,$N>=55),0.75,<br>
 									IF(AND($N<55,$N>=40),0.5,<br>
 										IF(AND($N<40,$N>=35),0.25,0)<br>
+									)
+								)
+							)
+						</code>
+						<!-- </pre> -->
+						<hr></div>
+					<div class="col-12">
+						
+					
+						<p><h4>BOBOT UNTUK RATA-RATA NILAI RAPOR (SEMESTER I - VI)</h4>
+						Jika N.RATA>=80, maka bobot adalah 1<br>
+						Jika N.RATA>=65 dan N.RATA<80, maka bobot adalah 0.75<br>
+						Jika N.RATA>=50 dan N.RATA<65, maka bobot adalah 0.5<br>
+						Jika N.RATA>=35 dan N.RATA<50, maka bobot adalah 0.25<br>
+						selain range tersebut maka bobot adalah Nol </p>
+						<!-- <pre> -->
+						<code>
+						<strong>$N = nilai input C3(NUN IPA)</strong><br>
+						=IF($NRATA>=80,1,<br>
+								IF(AND($NRATA<80,$NRATA>=65),0.75,<br>
+									IF(AND($NRATA<65,$NRATA>=50),0.5,<br>
+										IF(AND($NRATA<50,$NRATA>=35),0.25,0)<br>
 									)
 								)
 							)
