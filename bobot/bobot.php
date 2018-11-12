@@ -114,6 +114,38 @@
 								)
 							)
 						</code>
+						<code><pre>
+						<strong>SQL</strong><br>
+						IF (
+							(
+								(`a`.`avgmat` >= 80)
+								AND (`a`.`avgmat` <= 100)
+							),1,
+
+							IF (
+								(
+									(`a`.`avgmat` >= 65)
+									AND (`a`.`avgmat` < 80)
+								),0.75,
+
+								IF (
+									(
+										(`a`.`avgmat` >= 50)
+										AND (`a`.`avgmat` < 65)
+									),0.5,
+
+										IF (
+											(
+												(`a`.`avgmat` >= 35)
+												AND (`a`.`avgmat` < 50)
+											),
+											0.25,
+											0
+										)
+								)
+							)
+						) AS `c4`,</pre>
+						</code>
 						<!-- </pre> -->
 						<hr></div>
 						</div>
