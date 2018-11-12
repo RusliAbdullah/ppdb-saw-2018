@@ -7,6 +7,7 @@
  					<h1 class="display-3"><?= !empty($content_title)?$content_title:'Judul';  ?></h1>
  					<?php 
  						$a=!empty($_GET['a'])?htmlspecialchars(trim($_GET['a'])):'';
+ 						$s=!empty($_GET['s'])?htmlspecialchars(trim($_GET['s'])):'';
 						$sql="select * from siswa a join nilai b on a.id_siswa=b.id_siswa";
 	 	  				if(isset($a)&&!empty($a)): 
 	 	  					switch ($a) {
