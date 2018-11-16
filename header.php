@@ -43,7 +43,7 @@
             <a class="nav-link" href="<?= baseurl.'saw.php' ?>">Proses SAW</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Hasil Penilaian FSAW</a>
+            <a class="nav-link" href="<?= baseurl.'saw.php?a=proses&s=hasilmatriks' ?>">Hasil Penilaian SAW</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
