@@ -1,6 +1,6 @@
 <!-- The Modal -->
 <div class="modal fade" id="myModal">
-  <div class="modal-dialog  modal-lg">
+  <div class="modal-dialog  modal-fullscreen">
     <div class="modal-content">
 
       <!-- Modal Header -->
@@ -22,3 +22,12 @@
     </div>
   </div>
 </div>
+<style type="text/css">
+  .modal-fullscreen {
+    min-width: 100%;
+    width: 100%;
+    /*margin: 20px;*/
+    margin-left:10px;
+}
+
+</style>

@@ -29,6 +29,10 @@
 	 	  		 		echo "edit:".$id;
 	 	  		 		include ('nilai/edit.php');
 	 	  		 		break;
+	 	  		 	case 'new':
+	 	  		 		echo "new:".$id;
+	 	  		 		include ('nilai/new.php');
+	 	  		 		break;
 	 	  		 	// fungsi save
 	 	  		 	case 'save':
 	 	  				$id_siswa=!empty($_POST['id_siswa'])?htmlspecialchars(trim($_POST['id_siswa'])):'';
@@ -98,7 +102,7 @@
 
 <?php 
 // form siswa
-$form="siswa/form.php";
+$form="nilai/new.php";
 // modal siswa
 include('./modal.php'); ?>
 
