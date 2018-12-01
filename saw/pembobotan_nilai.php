@@ -25,6 +25,9 @@
             <th>C7</th>
             <th>C8</th>
             <th>C9</th>
+            <th>C10</th>
+            <th>C11</th>
+            <th>C12</th>
          
         </tr>
     </thead>
@@ -54,6 +57,9 @@
             <td class="text-right" > <?= !empty($row['c7'])?$row['c7']:'0'; ?></td>
             <td class="text-right" > <?= !empty($row['c8'])?$row['c8']:'0'; ?></td>
             <td class="text-right" > <?= !empty($row['c9'])?$row['c9']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['c10'])?$row['c10']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['c11'])?$row['c11']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['c12'])?$row['c12']:'0'; ?></td>
            
             
         </tr>

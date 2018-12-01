@@ -29,7 +29,9 @@
             <th>C7</th>
             <th>C8</th>
             <th>C9</th>
-         
+            <th>C10</th>
+            <th>C11</th>
+            <th>C12</th>
         </tr>
     </thead>
     <tbody>
@@ -49,7 +51,10 @@
                             cast((`a`.`c6` / `b`.`maxc6`) as decimal(10,2)) AS `rc6`,
                             cast((`a`.`c7` / `b`.`maxc7`) as decimal(10,2)) AS `rc7`,
                             cast((`a`.`c8` / `b`.`maxc8`) as decimal(10,2)) AS `rc8`,
-                            cast((`a`.`c9` / `b`.`maxc9`) as decimal(10,2)) AS `rc9`
+                            cast((`a`.`c9` / `b`.`maxc9`) as decimal(10,2)) AS `rc9`,
+                            cast((`a`.`c10` / `b`.`maxc10`) as decimal(10,2)) AS `rc10`,
+                            cast((`a`.`c11` / `b`.`maxc11`) as decimal(10,2)) AS `rc11`,
+                            cast((`a`.`c12` / `b`.`maxc12`) as decimal(10,2)) AS `rc12`
                         FROM
                             (
                                 `03-view-bobot` `a`
@@ -77,6 +82,9 @@
             <td class="text-right" > <?= !empty($row['rc7'])?$row['rc7']:'0'; ?></td>
             <td class="text-right" > <?= !empty($row['rc8'])?$row['rc8']:'0'; ?></td>
             <td class="text-right" > <?= !empty($row['rc9'])?$row['rc9']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['rc10'])?$row['rc10']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['rc11'])?$row['rc11']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['rc12'])?$row['rc12']:'0'; ?></td>
            
             
         </tr>

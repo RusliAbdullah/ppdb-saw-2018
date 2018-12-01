@@ -12,13 +12,18 @@
             <th>Nama Siswa</th>
             <th>NUN MAT</th>
             <th>NUN IPA</th>
-            <th>NUN BAHASA</th>
-            <th>R.MAT</th>
-            <th>R.IPA</th>
-            <th>R.IPS</th>
-            <th>R.BIND</th>
-            <th>R.BING</th>
-            <th>R.AGA</th>
+            <th>NUN B.ING </th>
+            <th>NUN B.IND</th>
+            <th>MAT (S6)</th>
+            <th>IPA (S6)</th>
+            <th>IPS (S6)</th>
+            <th>BIND (S6)</th>
+            <th>BING (S6)</th>
+            <th>AGA (S6)</th>
+            <th>TPA</th>
+            <th>AKH</th>
+            <th>PRI</th>
+            <th>WNCRA</th>
          
         </tr>
     </thead>
@@ -46,32 +51,38 @@
             </td>
             <td>
                 <?= !empty($row['nun_bing'])?$row['nun_bing']:'0'; ?>
+            </td>   
+            <td>
+                <?= !empty($row['nun_bind'])?$row['nun_bind']:'0'; ?>
             </td>
             <td>
-                <?php  $rmat=round(($row['mat1']+$row['mat2']+$row['mat3']+$row['mat4']+$row['mat5']+$row['mat6'])/6,2);?>
+                <?php  $rmat=$row['mat6'];?>
                 <?= !empty($rmat)?$rmat:'0'; ?>
             </td> 
             <td>
-                <?php  $ripa=round(($row['ipa1']+$row['ipa2']+$row['ipa3']+$row['ipa4']+$row['ipa5']+$row['ipa6'])/6,2);?>
+                <?php  $ripa=$row['ipa6'];?>
                 <?= !empty($ripa)?$ripa:'0'; ?>
             </td> 
             <td>
-                <?php  $rips=round(($row['ips1']+$row['ips2']+$row['ips3']+$row['ips4']+$row['ips5']+$row['ips6'])/6,2);?>
+                <?php  $rips=$row['ips6'];?>
                 <?= !empty($rips)?$rips:'0'; ?>
             </td> 
             <td>
-                <?php  $rbind=round(($row['bind1']+$row['bind2']+$row['bind3']+$row['bind4']+$row['bind5']+$row['bind6'])/6,2);?>
+                <?php  $rbind=$row['bind6'];?>
                 <?= !empty($rbind)?$rbind:'0'; ?>
             </td> 
             <td>
-                <?php  $rbing=round(($row['bing1']+$row['bing2']+$row['bing3']+$row['bing4']+$row['bing5']+$row['bing6'])/6,2);?>
+                <?php  $rbing=$row['bing6'];?>
                 <?= !empty($rbing)?$rbing:'0'; ?>
             </td> 
             <td>
-                <?php  $raga=round(($row['aga1']+$row['aga2']+$row['aga3']+$row['aga4']+$row['aga5']+$row['aga6'])/6,2);?>
+                <?php  $raga=$row['aga6'];?>
                 <?= !empty($raga)?$raga:'0'; ?>
             </td>
-           
+           <td><?= !empty($row['nilai_tpa'])?$row['nilai_tpa']:'0'; ?></td>
+           <td><?= !empty($row['akhlak'])?$row['akhlak']:'0'; ?></td>
+           <td><?= !empty($row['kepribadian'])?$row['kepribadian']:'0'; ?></td>
+           <td><?= !empty($row['wawancara'])?$row['wawancara']:'0'; ?></td>
         </tr>
         <?php $i++;endwhile; //akhir while?>
     </tbody>

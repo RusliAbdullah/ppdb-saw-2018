@@ -3,7 +3,16 @@
 
 <h3>Proses Simple Additive Weighting</h3>
 <p>
-    <strong>NUN</strong> = Nilai Ujian Nasional, <strong>R.</strong> = Nilai Rata-rata, <strong>MAT</strong> = Matematika, <strong>AGA</strong> = Pendidikan Agama, <strong>BING</strong> = Bahasa Inggris, <strong>BIND</strong> = Bahasa Indonesia
+    <strong>NUN</strong> = Nilai Ujian Nasional, 
+    <strong>MAT</strong> = Matematika, 
+    <strong>BING</strong> = Bahasa Inggris, 
+    <strong>BIND</strong> = Bahasa Indonesia
+    <strong>AGA</strong> = Pendidikan Agama, 
+    <strong>S6</strong> = Nilai Rapor Akhir (Semester 6), 
+    <strong>TPA</strong> = Nilai Tes Potensi Akademik (Tes Masuk), 
+    <strong>AKH</strong> = Penilaian Akhlak, 
+    <strong>PRI</strong> = Penilaian Kepribadian, 
+    <strong>WWNCR</strong> = Penilaian Wawancara, 
 
 </p>
 
