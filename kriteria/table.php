@@ -15,7 +15,6 @@
             <th>Nama Siswa</th>
             <th>Bobot Masuk</th>
             <th>Bobot IPA</th>
-            <th>Bobot IPS</th>
             <th style="width:20%">Aksi</th>
         </tr>
     </thead>
@@ -43,8 +42,7 @@
             </td>
             <td><?= !empty($row['bobot_ipa'])?$row['bobot_ipa']:''; ?>
             </td>
-            <td><?= !empty($row['bobot_ips'])?$row['bobot_ips']:''; ?>
-            </td>
+           
            
             <td>
                 <div class="btn-group " role="group" aria-label="Basic example">
@@ -65,7 +63,6 @@
             <th class="text-right" colspan="4">Total Nilai Bobot</th>
             <th><?= !empty($bobotmasuk)?$bobotmasuk:'0'; ?></th>
             <th><?= !empty($bobotipa)?$bobotipa:'0'; ?></th>
-            <th><?= !empty($bobotips)?$bobotips:'0'; ?></th>
            
             <th></th>
         </tr>
