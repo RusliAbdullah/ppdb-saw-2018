@@ -30,6 +30,9 @@
             <th>C7</th>
             <th>C8</th>
             <th>C9</th>
+              <th>C10</th>
+            <th>C11</th>
+            <th>C12</th>
          
         </tr>
     </thead>
@@ -50,7 +53,10 @@
                             cast((`a`.`rc6` * `b`.`wc6`) as decimal(10,2)) AS `w6`,
                             cast((`a`.`rc7` * `b`.`wc7`) as decimal(10,2)) AS `w7`,
                             cast((`a`.`rc8` * `b`.`wc8`) as decimal(10,2)) AS `w8`,
-                            cast((`a`.`rc9` * `b`.`wc9`) as decimal(10,2)) AS `w9`
+                            cast((`a`.`rc9` * `b`.`wc9`) as decimal(10,2)) AS `w9`,
+                            cast((`a`.`rc10` * `b`.`wc10`) as decimal(10,2)) AS `w10`,
+                            cast((`a`.`rc11` * `b`.`wc11`) as decimal(10,2)) AS `w11`,
+                            cast((`a`.`rc12` * `b`.`wc12`) as decimal(10,2)) AS `w12`
                         FROM
                             (
                                 `05-view-normalisasi-weighted` `a`
@@ -78,6 +84,9 @@
             <td class="text-right" > <?= !empty($row['w7'])?$row['w7']:'0'; ?></td>
             <td class="text-right" > <?= !empty($row['w8'])?$row['w8']:'0'; ?></td>
             <td class="text-right" > <?= !empty($row['w9'])?$row['w9']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['w10'])?$row['w10']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['w11'])?$row['w11']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['w12'])?$row['w12']:'0'; ?></td>
            
             
         </tr>

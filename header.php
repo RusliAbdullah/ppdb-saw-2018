@@ -24,7 +24,7 @@
       <div class="navbar-collapse collapse" id="navbarsExample03" style="">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?= baseurl ?>">Beranda <span class="sr-only">(current)</span></a>
           </li>
       
       

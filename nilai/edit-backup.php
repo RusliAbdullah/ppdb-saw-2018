@@ -20,27 +20,33 @@
 				<thead>
 					<tr>
 					
-						<th colspan="4" class="text-center" >NILAI UN</th>
-						<th colspan="5" class="text-center" >NILAI RAPOR SEMESTER VI</th>
-						<th colspan="3" class="text-center" >NON AKADEMIK</th>
-						
+						<th colspan="3" class="text-center" >NILAI UN</th>
+						<th colspan="6" class="text-center" >MATEMATIKA</th>
+						<th colspan="6" class="text-center">IPA</th>
+						<th colspan="6" class="text-center">BAHASA INGGRIS</th>
 					</tr>
 					<tr class="small">
 						<th class="text-danger">MAT</th>
 						<th class="text-danger">IPA</th>
-						<th class="text-danger">BING</th>
-						<th class="text-danger">BIND</th>
-						<th  class="text-info" >MAT</th>
-						<th  class="text-info">IPA</th>
-						<th  class="text-info">BING</th>
-						<th  class="text-info">BIND</th>
-						<th class="text-info">IPS</th>
-						<th class="text-info">AGAMA</th>
-						<th class="text-danger">WAWANCARA</th>
-						<th class="text-danger">AKHLAK</th>
-						<th class="text-danger">KEPRIBADIAN</th>
-						
-						
+						<th class="text-danger">BHS</th>
+						<th class="text-warning">I</th>
+						<th class="text-warning">II</th>
+						<th class="text-warning">III</th>
+						<th class="text-warning">IV</th>
+						<th class="text-warning">V</th>
+						<th class="text-warning">VI</th>
+						<th class="text-info">I</th>
+						<th class="text-info">II</th>
+						<th class="text-info">III</th>
+						<th class="text-info">IV</th>
+						<th class="text-info">V</th>
+						<th class="text-info">VI</th>
+						<th class="text-success">I</th>
+						<th class="text-success">II</th>
+						<th class="text-success">III</th>
+						<th class="text-success">IV</th>
+						<th class="text-success">V</th>
+						<th class="text-success">VI</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -58,47 +64,92 @@
 								<input type="text" class="form-control text-center" placeholder="0" name="nun_ipa" value="<?= !empty($row['nun_ipa'])?($row['nun_ipa']):'';?>">
 							</td>
 							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="nun_bing" value="<?= !empty($row['nun_bing'])?($row['nun_bing']):'';?>">
+								<input type="text" class="form-control text-center" placeholder="0" name="nun_bhs" value="<?= !empty($row['nun_bhs'])?($row['nun_bhs']):'';?>">
 							</td>
 							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="nun_bind" value="<?= !empty($row['nun_bind'])?($row['nun_bind']):'';?>">
+								<input type="text" class="form-control text-center" placeholder="0" name="mat1" value="<?= !empty($row['mat1'])?($row['mat1']):'';?>">
 							</td>
-						
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="mat2" value="<?= !empty($row['mat2'])?($row['mat2']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="mat3" value="<?= !empty($row['mat3'])?($row['mat3']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="mat4" value="<?= !empty($row['mat4'])?($row['mat4']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="mat5" value="<?= !empty($row['mat5'])?($row['mat5']):'';?>">
+							</td>
 							<td>
 								<input type="text" class="form-control text-center" placeholder="0" name="mat6" value="<?= !empty($row['mat6'])?($row['mat6']):'';?>">
 							</td>
-						
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="ipa1" value="<?= !empty($row['ipa1'])?($row['ipa1']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="ipa2" value="<?= !empty($row['ipa2'])?($row['ipa2']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="ipa3" value="<?= !empty($row['ipa3'])?($row['ipa3']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="ipa4" value="<?= !empty($row['ipa4'])?($row['ipa4']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="ipa5" value="<?= !empty($row['ipa5'])?($row['ipa5']):'';?>">
+							</td>
 							<td>
 								<input type="text" class="form-control text-center" placeholder="0" name="ipa6" value="<?= !empty($row['ipa6'])?($row['ipa6']):'';?>">
 							</td>
-							
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="bing1" value="<?= !empty($row['bing1'])?($row['bing1']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="bing2" value="<?= !empty($row['bing2'])?($row['bing2']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="bing3" value="<?= !empty($row['bing3'])?($row['bing3']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="bing4" value="<?= !empty($row['bing4'])?($row['bing4']):'';?>">
+							</td>
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="bing5" value="<?= !empty($row['bing5'])?($row['bing5']):'';?>">
+							</td>
 							<td>
 								<input type="text" class="form-control text-center" placeholder="0" name="bing6" value="<?= !empty($row['bing6'])?($row['bing6']):'';?>">
 							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="bind6" value="<?= !empty($row['bind6'])?($row['bind6']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="ips6" value="<?= !empty($row['ips6'])?($row['ips6']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="aga6" value="<?= !empty($row['aga6'])?($row['aga6']):'';?>">
-							</td>
-							
-						</tr><tr >
-							<td colspan="3"></td>
-							<td colspan="3">Nilai Rapor Semester VI</td>
-						
 							
 						</tr>
-						<tr class="small">
+						<tr>
 						
 							<th colspan="3" class="text-center" ></th>
-							<th class="text-center" >AGAMA</th>
-							<th class="text-center">IPS</th>
-							<th class="text-center">BAHASA INDONESIA</th>
+							<th colspan="6" class="text-center" >AGAMA</th>
+							<th colspan="6" class="text-center">IPS</th>
+							<th colspan="6" class="text-center">BAHASA INDONESIA</th>
 						</tr>
-						
+						<tr class="small">
+							<td colspan="3"></td>
+							<th class="text-danger">I</th>
+							<th class="text-danger">II</th>
+							<th class="text-danger">III</th>
+							<th class="text-danger">IV</th>
+							<th class="text-danger">V</th>
+							<th class="text-danger">VI</th>
+							<th class="text-primary">I</th>
+							<th class="text-primary">II</th>
+							<th class="text-primary">III</th>
+							<th class="text-primary">IV</th>
+							<th class="text-primary">V</th>
+							<th class="text-primary">VI</th>
+							<th class="text-success">I</th>
+							<th class="text-success">II</th>
+							<th class="text-success">III</th>
+							<th class="text-success">IV</th>
+							<th class="text-success">V</th>
+							<th class="text-success">VI</th>
+						</tr>
 						<tr>
 							<td colspan="3"></td>
 							<td class="">

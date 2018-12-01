@@ -27,6 +27,9 @@
             <th>Max (C7)</th>
             <th>Max (C8)</th>
             <th>Max (C9)</th>
+            <th>Max (C10)</th>
+            <th>Max (C11)</th>
+            <th>Max (C12)</th>
          
         </tr>
     </thead>
@@ -53,6 +56,9 @@
             <td class="text-right" > <?= !empty($row['maxc7'])?$row['maxc7']:'0'; ?></td>
             <td class="text-right" > <?= !empty($row['maxc8'])?$row['maxc8']:'0'; ?></td>
             <td class="text-right" > <?= !empty($row['maxc9'])?$row['maxc9']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['maxc9'])?$row['maxc10']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['maxc9'])?$row['maxc11']:'0'; ?></td>
+            <td class="text-right" > <?= !empty($row['maxc9'])?$row['maxc12']:'0'; ?></td>
            
             
         </tr>

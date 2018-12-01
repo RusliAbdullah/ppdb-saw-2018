@@ -52,7 +52,7 @@
                                                     ) + `a`.`w6`
                                                 ) + `a`.`w7`
                                             ) + `a`.`w8`
-                                        ) + `a`.`w9`
+                                        ) + `a`.`w9` + `a`.`w10` + `a`.`w11` + `a`.`w12` 
                                     ) as decimal(10,2)) AS `aw`
                                 FROM
                                     `06-view-matrix-bobot-masuk` `a`";
@@ -108,6 +108,9 @@
                                 cast(`b`.`c7` AS decimal(10,2)) as `c7`,
                                 cast(`b`.`c8` AS decimal(10,2)) as `c8`,
                                 cast(`b`.`c9` AS decimal(10,2)) as `c9`,
+                                cast(`b`.`c10` AS decimal(10,2)) as `c10`,
+                                cast(`b`.`c11` AS decimal(10,2)) as `c11`,
+                                cast(`b`.`c12` AS decimal(10,2)) as `c12`,
                                 cast(`a`.`aw` AS decimal(10,2))  as `aw`
                             FROM
                                 (
