@@ -40,7 +40,7 @@
 				</thead>
 				<tbody>
 				<?php
-					
+					$avgsains=$avgbahasa=0;
 					while($row=$query->fetch_assoc()):?>
 					
 						<tr>
