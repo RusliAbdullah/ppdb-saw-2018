@@ -21,7 +21,8 @@
 					<tr>
 					
 						<th colspan="4" class="text-center" >NILAI UN</th>
-						<th colspan="5" class="text-center" >NILAI RAPOR SEMESTER VI</th>
+						<th colspan="6" class="text-center" >NILAI RAPOR SEMESTER VI</th>
+						<th  class="text-center" >NILAI TPA</th>
 						<th colspan="3" class="text-center" >NON AKADEMIK</th>
 						
 					</tr>
@@ -36,9 +37,10 @@
 						<th  class="text-info">BIND</th>
 						<th class="text-info">IPS</th>
 						<th class="text-info">AGAMA</th>
-						<th class="text-danger">WAWANCARA</th>
+						<th class="text-primary">TPA</th>
 						<th class="text-danger">AKHLAK</th>
 						<th class="text-danger">KEPRIBADIAN</th>
+						<th class="text-danger">WAWANCARA</th>
 						
 						
 					</tr>
@@ -84,76 +86,17 @@
 							<td>
 								<input type="text" class="form-control text-center" placeholder="0" name="aga6" value="<?= !empty($row['aga6'])?($row['aga6']):'';?>">
 							</td>
-							
-						</tr><tr >
-							<td colspan="3"></td>
-							<td colspan="3">Nilai Rapor Semester VI</td>
-						
-							
-						</tr>
-						<tr class="small">
-						
-							<th colspan="3" class="text-center" ></th>
-							<th class="text-center" >AGAMA</th>
-							<th class="text-center">IPS</th>
-							<th class="text-center">BAHASA INDONESIA</th>
-						</tr>
-						
-						<tr>
-							<td colspan="3"></td>
-							<td class="">
-								<input type="text" class="form-control text-center" placeholder="0" name="aga1" value="<?= !empty($row['aga1'])?($row['aga1']):'';?>">
-							</td>
-							<td class="">
-								<input type="text" class="form-control text-center" placeholder="0" name="aga2" value="<?= !empty($row['aga2'])?($row['aga2']):'';?>">
-							</td>
-							<td class="">
-								<input type="text" class="form-control text-center" placeholder="0" name="aga3" value="<?= !empty($row['aga3'])?($row['aga3']):'';?>">
-							</td>
-							<td class="">
-								<input type="text" class="form-control text-center" placeholder="0" name="aga4" value="<?= !empty($row['aga4'])?($row['aga4']):'';?>">
-							</td>
-							<td class="">
-								<input type="text" class="form-control text-center" placeholder="0" name="aga5" value="<?= !empty($row['aga5'])?($row['aga5']):'';?>">
-							</td>
-							<td class="">
-								<input type="text" class="form-control text-center" placeholder="0" name="aga6" value="<?= !empty($row['aga6'])?($row['aga6']):'';?>">
+							<td>
+								<input type="text" class="form-control text-center" placeholder="0" name="nilai_tpa" value="<?= !empty($row['nilai_tpa'])?($row['nilai_tpa']):'';?>">
 							</td>
 							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="ips1" value="<?= !empty($row['ips1'])?($row['ips1']):'';?>">
+								<input type="text" class="form-control text-center" placeholder="0" name="akhlak" value="<?= !empty($row['akhlak'])?($row['akhlak']):'';?>">
 							</td>
 							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="ips2" value="<?= !empty($row['ips2'])?($row['ips2']):'';?>">
-							</td>
+								<input type="text" class="form-control text-center" placeholder="0" name="kepribadian" value="<?= !empty($row['kepribadian'])?($row['kepribadian']):'';?>">
+							</td>	
 							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="ips3" value="<?= !empty($row['ips3'])?($row['ips3']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="ips4" value="<?= !empty($row['ips4'])?($row['ips4']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="ips5" value="<?= !empty($row['ips5'])?($row['ips5']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="ips6" value="<?= !empty($row['ips6'])?($row['ips6']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="bind1" value="<?= !empty($row['bind1'])?($row['bind1']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="bind2" value="<?= !empty($row['bind2'])?($row['bind2']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="bind3" value="<?= !empty($row['bind3'])?($row['bind3']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="bind4" value="<?= !empty($row['bind4'])?($row['bind4']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="bind5" value="<?= !empty($row['bind5'])?($row['bind5']):'';?>">
-							</td>
-							<td>
-								<input type="text" class="form-control text-center" placeholder="0" name="bind6" value="<?= !empty($row['bind6'])?($row['bind6']):'';?>">
+								<input type="text" class="form-control text-center" placeholder="0" name="wawancara" value="<?= !empty($row['wawancara'])?($row['wawancara']):'';?>">
 							</td>
 							
 						</tr>
