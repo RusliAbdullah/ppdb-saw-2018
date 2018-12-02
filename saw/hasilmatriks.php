@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="row" style="margin-top: 20px;">
-    <div class="col">
+    <div class="col bg-info">
 
         <h2>Hasil Sebelum Diurutkan</h2>
         <table class="table datatables table-hover table-striped table-borderless table-sm">
@@ -78,7 +78,7 @@
             </tbody>
         </table>
     </div>
-    <div class="col">
+    <div class="col bg-success">
 
         <h2>Hasil Setelah Diurutkan</h2>
         <table class="table datatables table-hover table-striped table-borderless table-sm">

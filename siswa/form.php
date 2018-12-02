@@ -8,13 +8,13 @@
     <div class="row">
         <div class="col-7">
             <div class="form-group">
-                <label for="nama_siswa">Nama Siswa</label>
+                <label class="text-primary text-uppercase" for="nama_siswa"><strong>Nama Siswa</strong></label>
                 <input name="nama_siswa" type="text" class="form-control" id="nama_siswa" required placeholder="Masukkan Nama Siswa" value="<?php echo (!empty($data['nama_siswa'])?$data['nama_siswa']:''); ?>">
             </div>
         </div>
         <div class="col-5">
             <div class="form-group">
-                <label for="asal_sekolah">Asal Sekolah</label>
+                <label class="text-primary text-uppercase" for="asal_sekolah"><strong>Asal Sekolah</strong></label>
                 <input name="asal_sekolah" type="text" class="form-control" id="asal_sekolah" required placeholder="Masukkan Asal Sekolah" value="<?php echo (!empty($data['asal_sekolah'])?$data['asal_sekolah']:''); ?>">
             </div>
         </div>
@@ -22,13 +22,13 @@
     <div class="row">
         <div class="col-4">
             <div class="form-group">
-                <label for="tmp_lahir">Tempat Lahir</label>
+                <label class="text-primary text-uppercase" for="tmp_lahir"><strong>Tempat Lahir</strong></label>
                 <input name="tmp_lahir" type="text" class="form-control" id="tmp_lahir" required placeholder="Masukkan Tempat Lahir" value="<?php echo (!empty($data['tmp_lahir'])?$data['tmp_lahir']:''); ?>">
             </div>
         </div>
         <div class="col-3">
             <div class="form-group">
-                <label for="tgl_lahir">Tanggal Lahir</label>
+                <label class="text-primary text-uppercase" for="tgl_lahir"><strong>Tanggal Lahir</strong></label>
                 <input name="tgl_lahir" type="text" class="form-control" id="tgl_lahir" required placeholder="Format Tahun-Bulan-Hari" value="<?php echo (!empty($data['tgl_lahir'])?$data['tgl_lahir']:date('Y-m-d')); ?>">
                 <!-- <input class="form-control" id="exampleInputDatePicker1" placeholder="Pick a date" type="text"> -->
             </div>
@@ -37,7 +37,7 @@
 
 
         <div class="col-5">
-                <label for="alamat">Jenis Kelamin</label>
+                <label class="text-primary text-uppercase" for="alamat"><strong>Jenis Kelamin</strong></label>
             <div class="form-group">  
                 <div class="custom-control custom-radio  custom-control-inline">
                     <input class="custom-control-input" name="j_kelamin" type="radio" id="j_kelamin1" required value="L" <?php if(!empty($data['j_kelamin'])&&$data['j_kelamin']=='L' ){ echo "checked='checked'" ;} ?>> 
@@ -57,13 +57,13 @@
     <div class="row">
         <div class="col">
             <div class="form-group">
-                <label for="alamat">Alamat</label>
+                <label class="text-primary text-uppercase" for="alamat"><strong>Alamat</strong></label>
                 <textarea name="alamat" type="text" class="form-control" id="alamat" placeholder="Masukkan Alamat Siswa"><?php echo (!empty($data['alamat'])?$data['alamat']:''); ?></textarea>
             </div>
         </div>
         <div class="col-5">
             <div class="form-group">
-                <label for="telp">Telpon</label>
+                <label class="text-primary text-uppercase" for="telp"><strong>Telpon</strong></label>
                 <input name="telp" type="text" class="form-control" id="telp" placeholder="Masukkan Telpon Siswa" value="<?php echo (!empty($data['telp'])?$data['telp']:''); ?>">
             </div>
         </div>
