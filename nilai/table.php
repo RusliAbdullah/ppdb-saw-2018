@@ -7,21 +7,33 @@
 </p>
 <!-- </div> -->
 <p>
-    <strong>NUN</strong> = Nilai Ujian Nasional, <strong>R.</strong> = Nilai Rata-rata, <strong>MAT</strong> = Matematika, <strong>AGA</strong> = Pendidikan Agama, <strong>BING</strong> = Bahasa Inggris, <strong>BIND</strong> = Bahasa Indonesia
+    <strong>NUN</strong> = Nilai Ujian Nasional, 
+    <strong>R.</strong> = Nilai Rata-rata, 
+    <strong>MAT</strong> = Matematika, 
+    <strong>AGA</strong> = Pendidikan Agama, 
+    <strong>BING</strong> = Bahasa Inggris, 
+    <strong>TPA</strong> = Tes Potensi Akademik (Tes Masuk)
+    <strong>AKH</strong> = Akhlak
+    <strong>PRI</strong> = Kepribadian
+    <strong>WNCRA</strong> = Wawancara
 
 </p>
 <table class="table table-hover table-striped table-borderless table-sm">
     <thead>
         <tr>
-            <th>No.</th>
-            <th>Nama Siswa</th>
-            <th>NUN IPA | MAT | BHS</th>
-            <th>R.MAT</th>
-            <th>R.IPA</th>
-            <th>R.IPS</th>
-            <th>R.BIND</th>
-            <th>R.BING</th>
-            <th>R.AGA</th>
+            <th class="text-center">No.</th>
+            <th class="text-center">Nama Siswa</th>
+            <th class="text-center">NUN </th>
+            <th class="text-center">MAT (S6)</th>
+            <th class="text-center">IPA (S6)</th>
+            <th class="text-center">IPS (S6)</th>
+            <th class="text-center">BIND (S6)</th>
+            <th class="text-center">BING (S6)</th>
+            <th class="text-center">AGA (S6)</th>
+            <th class="text-center">TPA</th>
+            <th class="text-center">AKH</th>
+            <th class="text-center">PRI</th>
+            <th class="text-center">WNCRA</th>
             <th style="width:20%">Aksi</th>
         </tr>
     </thead>
@@ -37,39 +49,41 @@
 					?>
         <tr>
             <td >
-                <?= $i; ?>
+                <?= $i;//print_r($row) ?>
             </td>
-            <td style="width:20%">    <?= !empty($row['nama_siswa'])?$row['nama_siswa']:''; ?></td>
-            <td style="width:30%">    
+            <td class="text-center" style="width:20%">    <?= !empty($row['nama_siswa'])?$row['nama_siswa']:''; ?></td>
+            <td class="text-center" style="width:30%">    
                 <span class="chip"><i class="chip-icon bg-primary" style="font-size: 12px">MAT</i><?= !empty($row['nun_mat'])?$row['nun_mat']:'0'; ?></span>
                 <span class="chip"><i class="chip-icon bg-danger" style="font-size: 12px">IPA</i><?= !empty($row['nun_ipa'])?$row['nun_ipa']:'0'; ?></span>
-                <span class="chip"><i class="chip-icon bg-info" style="font-size: 12px">BHS</i><?= !empty($row['nun_bing'])?$row['nun_bing']:'0'; ?></span>
+                <span class="chip"><i class="chip-icon bg-info" style="font-size: 12px">BING</i><?= !empty($row['nun_bing'])?$row['nun_bing']:'0'; ?></span>
+                <span class="chip"><i class="chip-icon bg-success" style="font-size: 12px">BIND</i><?= !empty($row['nun_bind'])?$row['nun_bind']:'0'; ?></span>
             </td>
-            <td>
-                <?php  $rmat=round(($row['mat1']+$row['mat2']+$row['mat3']+$row['mat4']+$row['mat5']+$row['mat6'])/6,2);?>
+            <td class="text-center">
+                <?php  $rmat=$row['mat6'];?>
                 <?= !empty($rmat)?$rmat:'0'; ?>
             </td> 
-            <td>
-                <?php  $ripa=round(($row['ipa1']+$row['ipa2']+$row['ipa3']+$row['ipa4']+$row['ipa5']+$row['ipa6'])/6,2);?>
+            <td class="text-center">
+                <?php  $ripa=$row['ipa6'];?>
                 <?= !empty($ripa)?$ripa:'0'; ?>
             </td> 
-            <td>
-                <?php  $rips=round(($row['ips1']+$row['ips2']+$row['ips3']+$row['ips4']+$row['ips5']+$row['ips6'])/6,2);?>
+            <td class="text-center">
+                <?php  $rips=$row['ips6'];?>
                 <?= !empty($rips)?$rips:'0'; ?>
             </td> 
-            <td>
-                <?php  $rbind=round(($row['bind1']+$row['bind2']+$row['bind3']+$row['bind4']+$row['bind5']+$row['bind6'])/6,2);?>
+            <td class="text-center">
+                <?php  $rbind=$row['bind6'];?>
                 <?= !empty($rbind)?$rbind:'0'; ?>
             </td> 
-            <td>
-                <?php  $rbing=round(($row['bing1']+$row['bing2']+$row['bing3']+$row['bing4']+$row['bing5']+$row['bing6'])/6,2);?>
+            <td class="text-center">
+                <?php  $rbing=$row['bing6'];?>
                 <?= !empty($rbing)?$rbing:'0'; ?>
             </td> 
-            <td>
-                <?php  $raga=round(($row['aga1']+$row['aga2']+$row['aga3']+$row['aga4']+$row['aga5']+$row['aga6'])/6,2);?>
-                <?= !empty($raga)?$raga:'0'; ?>
-            </td>
-            <td>
+            <td class="text-center"><?php  $raga=$row['aga6']; echo !empty($raga)?$raga:'0'; ?></td>
+            <td class="text-center"><?= !empty($row['nilai_tpa'])?$row['nilai_tpa']:'0'; ?></td>
+            <td class="text-center"><?= !empty($row['akhlak'])?$row['akhlak']:'0'; ?></td>
+            <td class="text-center"><?= !empty($row['kepribadian'])?$row['kepribadian']:'0'; ?></td>
+            <td class="text-center"><?= !empty($row['wawancara'])?$row['wawancara']:'0'; ?></td>
+            <td class="text-center">
                 <div class="btn-group " role="group" aria-label="Basic example">
                     <a href="<?= !empty($row['id_siswa'])?"siswa.php?a=nilai&id=".($row['id_siswa']):''; ?>" class="btn btn-primary btn-sm"> <i class="material-icons">assignment_turned_in</i></a>
                     <a href="<?= !empty($row['id_siswa'])?"nilai.php?a=edit&id=".($row['id_siswa']):''; ?>" class="btn btn-success btn-sm"> <i class="material-icons">edit</i></a>
