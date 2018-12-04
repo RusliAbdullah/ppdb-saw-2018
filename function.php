@@ -10,7 +10,8 @@ class Fungsi{
 	{
 		// return FILTER_SANITIZE_NUMBER_FLOAT(htmlspecialchars(trim($input)));
 		$result= htmlspecialchars(trim($input));
-		return preg_replace("/[^0-9,]/", "", $result);
+		return $result;
+		// return preg_replace("/[^0-9,]/", "", $result);
 	}
 	public function bersih($input)
 	{
