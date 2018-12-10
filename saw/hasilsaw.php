@@ -3,7 +3,7 @@
     <div class="col-7">
         
     </div>  		
-	<div class="col-3"><a href="<?= baseurl.'saw.php?a=proses&s=hasilipa' ?>" type="button" class="btn btn-info float-right">LANJUT</a>	</div>
+	<div class="col-3"><a href="<?= baseurl.'saw.php?a=proses&s=nilaimaks' ?>" type="button" class="btn btn-info float-right">LANJUT</a>	</div>
 </div>
 <div class="row" style="margin-top: 20px;">
     <div class="col text-center">
@@ -19,7 +19,7 @@
 <div class="row" style="margin-top: 20px;">
     <div class="col bg-info">
 
-        <h2>Hasil Sebelum Diurutkan</h2>
+        <h2>Hasil SAW Kelas IPA</h2>
         <table class="table datatables table-hover table-striped table-borderless table-sm">
             <thead>
                 <tr>
@@ -36,26 +36,33 @@
                             // select 02-view-kriteria-alt
                             // $sql="SELECT * FROM `05-view-normalisasi-weighted`";
                             $sql="SELECT
-                                    `a`.`id_nilai` AS `id_nilai`,
-                                    `a`.`id_siswa` AS `id_siswa`,
-                                    `a`.`nama_siswa` AS `nama_siswa`,
-                                    cast((
+                                `b`.`id_siswa` AS `id_siswa`,
+                                `b`.`nama_siswa` AS `nama_siswa`,
+                                cast(`b`.`c1` AS decimal(10,2)) as `c1`,
+                                cast(`b`.`c3` AS decimal(10,2)) as `c3`,
+                                cast(`b`.`c2` AS decimal(10,2)) as `c2`,
+                                cast(`b`.`c4` AS decimal(10,2)) as `c4`,
+                                cast(`b`.`c5` AS decimal(10,2)) as `c5`,
+                                cast(`b`.`c6` AS decimal(10,2)) as `c6`,
+                                cast(`b`.`c7` AS decimal(10,2)) as `c7`,
+                                cast(`b`.`c8` AS decimal(10,2)) as `c8`,
+                                cast(`b`.`c9` AS decimal(10,2)) as `c9`,
+                                cast(`b`.`c10` AS decimal(10,2)) as `c10`,
+                                cast(`b`.`c11` AS decimal(10,2)) as `c11`,
+                                cast(`b`.`c12` AS decimal(10,2)) as `c12`,
+                                cast(`a`.`aw` AS decimal(10,2))  as `aw`
+                            FROM
+                                (
+                                    `07-view-alternative-weight-bobot-masuk` `a`
+                                    JOIN `02-view-kriteria-alt` `b` ON (
                                         (
-                                            (
-                                                (
-                                                    (
-                                                        (
-                                                            (
-                                                                (`a`.`w1` + `a`.`w2`) + `a`.`w3`
-                                                            ) + `a`.`w4`
-                                                        ) + `a`.`w5`
-                                                    ) + `a`.`w6`
-                                                ) + `a`.`w7`
-                                            ) + `a`.`w8`
-                                        ) + `a`.`w9` + `a`.`w10` + `a`.`w11` + `a`.`w12` 
-                                    ) as decimal(10,2)) AS `aw`
-                                FROM
-                                    `06-view-matrix-bobot-masuk` `a`";
+                                            `a`.`id_siswa` = `b`.`id_siswa`
+                                        )
+                                    )
+                                )
+
+                            ORDER BY
+                                `a`.`aw` DESC LIMIT ".kuotaipa;
 
                             $query=$koneksi->query($sql);
                             // selama dalam variabel query terdapat data, maka tampilkan datanya
@@ -80,7 +87,7 @@
     </div>
     <div class="col bg-success">
 
-        <h2>Hasil Setelah Diurutkan</h2>
+        <h2>Hasil SAW Kelas IPS</h2>
         <table class="table datatables table-hover table-striped table-borderless table-sm">
             <thead>
                 <tr>
