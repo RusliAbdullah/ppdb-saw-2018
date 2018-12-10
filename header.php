@@ -1,4 +1,9 @@
-<?php define('baseurl','http://ppdb.id/'); ?>
+<?php 
+define('baseurl','http://ppdb.id/'); 
+define('kuotaipa','30'); 
+define('kuotaips','30'); 
+
+?>
 <!DOCTYPE html>
 	<html lang="">
 		<head>

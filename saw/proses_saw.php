@@ -59,6 +59,20 @@
             include 'hasilmatriks.php';
             
             break;
+        case 'hasilipa':
+            # code...
+            echo "<h2>Hasil SAW Kelas IPA</h2>";
+            
+            include 'hasilipa.php';
+            
+            break; 
+        case 'hasilips':
+            # code...
+            echo "<h2>Hasil SAW Kelas IPS</h2>";
+            
+            include 'hasilips.php';
+            
+            break;
         
         default:
             echo "<h2>Nilai Calon Siswa</h2>";
