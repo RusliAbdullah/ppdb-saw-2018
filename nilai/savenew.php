@@ -12,6 +12,7 @@ require('function.php');
 	$akh=!empty($_POST["akhlak"])?($clean->bersih_angka($_POST["akhlak"])):'0';
 	$kepri=!empty($_POST["kepribadian"])?($clean->bersih_angka($_POST["kepribadian"])):'0';
 	$wwcara=!empty($_POST["wawanca"])?($clean->bersih_angka($_POST["wawanca"])):'0';
+	$tpa=!empty($_POST["nilai_tpa"])?($clean->bersih_angka($_POST["nilai_tpa"])):'0';
 	
 	// IPA
 	$ipa6=!empty($_POST["ipa6"])?($clean->bersih_angka($_POST["ipa6"])):'0';
@@ -54,6 +55,7 @@ require('function.php');
 			`bind6`,
 			`mat6`,
 			`aga6`,
+			`nilai_tpa`,
 			`akhlak`,
 			`kepribadian`,
 			`wawancara`,
@@ -64,6 +66,7 @@ require('function.php');
 				 ".$nun_ips.", 
 				 ".$nun_bing.", 
 				 ".$nun_bind.", 
+				 ".$tpa.", 
 				 ".$akh.", 
 				 ".$kepri.", 
 				 ".$wwcara.", 
