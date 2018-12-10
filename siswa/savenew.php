@@ -12,8 +12,8 @@
 	$alamat=!empty($_POST["alamat"])?(($_POST["alamat"])):'0';
 	$telp=!empty($_POST["telp"])?(($_POST["telp"])):'0';
 
-	$sql="INSERT INTO `siswa` (`asal_sekolah`, `nama_siswa`, `tmp_lahir`, `j_kelamin`, `alamat`, `telp`) 
-	VALUES ('".$asal_sekolah."', '".$nama_siswa."', '".$tmp_lahir."', '".$j_kelamin."', '".$alamat."', '".$telp."');";
+	$sql="INSERT INTO `siswa` (`asal_sekolah`, `nama_siswa`, `tmp_lahir`,`tgl_lahir`, `j_kelamin`, `alamat`, `telp`) 
+	VALUES ('".$asal_sekolah."', '".$nama_siswa."', '".$tmp_lahir."','".$tgl_lahir."', '".$j_kelamin."', '".$alamat."', '".$telp."');";
 	
 	$query=$koneksi->query($sql);
 		// jika hasil query sukses
