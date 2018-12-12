@@ -21,6 +21,9 @@
 
         <?php require 'kelasipa.php'; ?>
     </div>
+    <div class="col bg-success">
+        <?php require 'kelasips.php'; ?>
+    </div>
    
     
 </div>
