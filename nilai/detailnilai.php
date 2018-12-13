@@ -12,15 +12,15 @@
 
 <table class="table table-hover table-condensed table-striped datatables text-center table-sm">
 				<thead>
-					<tr>
+					<!-- <tr>
 					
 						<th colspan="4" class="text-center text-danger" >NILAI UN</th>
 						<th colspan="6" class="text-center text-info" >NILAI RAPOR SEMESTER 6</th>
 						<th  class="text-center text-primary" >NILAI TPA</th>
 						<th colspan="3" class="text-center text-success" >NON AKADEMIK</th>
 						
-					</tr>
-					<tr class="small">
+					</tr> 
+					 tr class="small">
 						<th class="text-center text-danger">MAT</th>
 						<th class="text-center text-danger">IPA</th>
 						<th class="text-center text-danger">BING</th>
@@ -36,7 +36,21 @@
 						<th class="text-center text-success">KEPRIBADIAN</th>
 						<th class="text-center text-success">WAWANCARA</th>
 
-					</tr>
+					</tr> -->
+					<th class="text-center text-danger">NMAT (C1)</th>
+                        <th class="text-center text-danger">NBIND (C2)</th>
+                        <th class="text-center text-danger">NIPA (C3)</th>
+                        <th class="text-center text-info">R.BING  (C4)</th>
+                        <th class="text-center text-info">R.BIND (C4)</th>
+                        <th class="text-center text-info" >R.MAT (C5)</th>
+                        <th class="text-center text-info">R.IPA (C5)</th>
+                        <th class="text-center text-info">R.IPS (C6)</th>
+                        <th class="text-center text-info">R.AGA (C7)</th>
+                        <th class="text-center text-danger">NBING (C8)</th>
+                        <th class="text-center text-primary">TPA (C9)</th>
+                        <th class="text-center text-success">WWNCR (C10)</th>
+                        <th class="text-center text-success">AKH (C11)</th>
+                        <th class="text-center text-success">PRI (C12)</th>
 				</thead>
 				<tbody>
 				<?php
@@ -45,20 +59,20 @@
 					
 						<tr>
 							<td class="text-center text-danger"><?= !empty($row['nun_mat'])?($row['nun_mat']):'0';?></td>
-							<td class="text-center text-danger"><?= !empty($row['nun_ipa'])?($row['nun_ipa']):'0';?></td>
-							<td class="text-center text-danger"><?= !empty($row['nun_bing'])?($row['nun_bing']):'0';?></td>
 							<td class="text-center text-danger"><?= !empty($row['nun_bind'])?($row['nun_bind']):'0';?></td>
+							<td class="text-center text-danger"><?= !empty($row['nun_ipa'])?($row['nun_ipa']):'0';?></td>
 						
-							<td class="text-info text-center"><?= !empty($row['mat6'])?($row['mat6']):'0';?></td>
-							<td class="text-info text-center"><?= !empty($row['ipa6'])?($row['ipa6']):'0';?></td>
 							<td class="text-info text-center"><?= !empty($row['bing6'])?($row['bing6']):'0';?></td>
 							<td class="text-info text-center"><?= !empty($row['bind6'])?($row['bind6']):'0';?></td>
+							<td class="text-info text-center"><?= !empty($row['mat6'])?($row['mat6']):'0';?></td>
+							<td class="text-info text-center"><?= !empty($row['ipa6'])?($row['ipa6']):'0';?></td>
 							<td class="text-info text-center"><?= !empty($row['ips6'])?($row['ips6']):'0';?></td>
 							<td class="text-info text-center"><?= !empty($row['aga6'])?($row['aga6']):'0';?></td>
+							<td class="text-center text-danger"><?= !empty($row['nun_bing'])?($row['nun_bing']):'0';?></td>
 							<td class="text-center text-primary"><?= !empty($row['nilai_tpa'])?($row['nilai_tpa']):'0';?></td>
+							<td class="text-center text-success"><?= !empty($row['wawancara'])?($row['wawancara']):'0';?></td>
 							<td class="text-center text-success"><?= !empty($row['akhlak'])?($row['akhlak']):'0';?></td>
 							<td class="text-center text-success"><?= !empty($row['kepribadian'])?($row['kepribadian']):'0';?></td>
-							<td class="text-center text-success"><?= !empty($row['wawancara'])?($row['wawancara']):'0';?></td>
 							
 							
 						</tr>
@@ -69,9 +83,9 @@
 						?>
 						<tr>
 						
-							<td colspan="4" class="text-center text-warning" ></td>
-							<td colspan="2" class="text-center text-warning" ><?= !empty($avgsains)?"AVG(Sains): ".round($avgsains/2,2,TRUE):0; ?></td>
+							<td colspan="3" class="text-center text-warning" ></td>
 							<td colspan="2" class="text-center text-warning" ><?= !empty($avgbahasa)?"AVG(Bahasa): ".round($avgbahasa/2,2,TRUE):0; ?></td>
+							<td colspan="2" class="text-center text-warning" ><?= !empty($avgsains)?"AVG(Sains): ".round($avgsains/2,2,TRUE):0; ?></td>
 							
 							
 						</tr>

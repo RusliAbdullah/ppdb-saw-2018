@@ -17,17 +17,18 @@
 	 	  	if(isset($a)&&!empty($a)): 
 	 	  		if(isset($id)&&!empty($id)&&($id!=null)&&($id!=0)): 
 	 	  			$sql=$sql." where id_kriteria=".($id);
-	 	  			include('kriteria/detail.php');
 	 	  			
 	 	  			switch ($a) {
 	 	  			// fungsi nilai
 	 	  		 	case 'nilai':
-	 	  		 		echo "nilai:".$id;
+	 	  		 		// echo "nilai:".$id;
+	 	  				include('kriteria/detail.php');
 	 	  		 		include 'nilai/detailnilai.php';
 	 	  		 		break;
 	 	  		 	// fungsi edit
 	 	  		 	case 'edit':
 	 	  		 		echo "edit:".$id;
+	 	  		 		include('form.php');
 	 	  		 		break;
 	 	  		 	// fungsi save
 	 	  		 	case 'save':
@@ -38,6 +39,7 @@
 	 	  				}else{
 	 	  					// fungsi save new
 	 	  		 			echo "save:".$id;
+	 	  		 			include('savenew.php');
 	 	  				}
 
 	 	  		 		break;
