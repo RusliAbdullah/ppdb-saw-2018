@@ -11,9 +11,8 @@ endif;
 // print_r($data);
  ?>
 
-<form action="kriteria.php?a=save" method="POST" role="form">
+<form action="kriteria.php?a=save&id=123456" method="POST" role="form">
     <legend>Form Kriteria</legend>
-    <input type="hidden" name="form" value="siswa">
     <input type="hidden" name="id_kriteria" value="<?php echo (!empty($data['id_kriteria'])?$data['id_kriteria']:''); ?>">
     <div class="row">
         <div class="col-5">
