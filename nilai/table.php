@@ -21,19 +21,9 @@
 <table class="table table-hover table-striped table-borderless table-sm">
     <thead>
         <tr>
-            <th class="text-center" style="width:5%"">No.</th>
+            <th class="text-center" style="width:5%">No.</th>
             <th class="text-center" style="width:30%">Nama Siswa</th>
-            <!-- <th class="text-center" style="width: 5%">NUN </th>
-            <th class="text-center" style="width: 5%">MAT (S6)</th>
-            <th class="text-center" style="width: 5%">IPA (S6)</th>
-            <th class="text-center" style="width: 5%">IPS (S6)</th>
-            <th class="text-center" style="width: 5%">BIND (S6)</th>
-            <th class="text-center" style="width: 5%">BING (S6)</th>
-            <th class="text-center" style="width: 5%">AGA (S6)</th>
-            <th class="text-center" style="width: 5%">TPA</th>
-            <th class="text-center" style="width: 5%">AKH</th>
-            <th class="text-center" style="width: 5%">PRI</th>
-            <th class="text-center" style="width: 5%">WNCRA</th> -->
+          
             <th class="text-center text-danger">NUN (C1,C2,C3,C8)</th>
                         <th class="text-center text-info">R.BING  (C4)</th>
                         <th class="text-center text-info">R.BIND (C4)</th>

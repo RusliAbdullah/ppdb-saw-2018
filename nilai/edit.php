@@ -83,9 +83,39 @@
 							<td><input type="text" class="form-control text-center" placeholder="0" name="nun_bing" value="<?= !empty($row['nun_bing'])?($row['nun_bing']):'';?>"></td>
 						
 							<td><input type="text" class="form-control text-center" placeholder="0" name="nilai_tpa" value="<?= !empty($row['nilai_tpa'])?($row['nilai_tpa']):'';?>"></td>
-							<td><input type="text" class="form-control text-center" placeholder="0" name="wawancara" value="<?= !empty($row['wawancara'])?($row['wawancara']):'';?>"></td>
-							<td><input type="text" class="form-control text-center" placeholder="0" name="akhlak" value="<?= !empty($row['akhlak'])?($row['akhlak']):'';?>"></td>
-							<td><input type="text" class="form-control text-center" placeholder="0" name="kepribadian" value="<?= !empty($row['kepribadian'])?($row['kepribadian']):'';?>"></td>	
+							<td>
+								<select name="wawancara" class="form-control">
+									<option value="0">Nilai</option>
+									<option value="80" <?= !empty($row['wawancara'])&&($row['wawancara']=="80")?'selected="selected"':'';?>>A</option>
+									<option value="70" <?= !empty($row['wawancara'])&&($row['wawancara']=="70")?'selected="selected"':'';?>>B</option>
+									<option value="60" <?= !empty($row['wawancara'])&&($row['wawancara']=="60")?'selected="selected"':'';?>>C</option>
+									<option value="40" <?= !empty($row['wawancara'])&&($row['wawancara']=="40")?'selected="selected"':'';?>>D</option>
+									
+								</select>
+							</td>
+							<td>
+								
+								<select name="akhlak" class="form-control">
+									<option value="0">Nilai</option>
+									<option value="80" <?= !empty($row['akhlak'])&&($row['akhlak']=="80")?'selected="selected"':'';?>>A</option>
+									<option value="70" <?= !empty($row['akhlak'])&&($row['akhlak']=="70")?'selected="selected"':'';?>>B</option>
+									<option value="60" <?= !empty($row['akhlak'])&&($row['akhlak']=="60")?'selected="selected"':'';?>>C</option>
+									<option value="40" <?= !empty($row['akhlak'])&&($row['akhlak']=="40")?'selected="selected"':'';?>>D</option>
+									
+								</select>
+							</td>
+							<td>
+								<?php //echo $row['kepribadian'] ?>
+								<select name="kepribadian" class="form-control">
+									<option value="0">Nilai</option>
+									<option value="80" <?= !empty($row['kepribadian'])&&($row['kepribadian']=="80")?'selected="selected"':'';?>>A</option>
+									<option value="70" <?= !empty($row['kepribadian'])&&($row['kepribadian']=="70")?'selected="selected"':'';?>>B</option>
+									<option value="60" <?= !empty($row['kepribadian'])&&($row['kepribadian']=="60")?'selected="selected"':'';?>>C</option>
+									<option value="40" <?= !empty($row['kepribadian'])&&($row['kepribadian']=="40")?'selected="selected"':'';?>>D</option>
+									
+								</select>
+
+								
 							
 						</tr>
 					<?php $i++;//endwhile;

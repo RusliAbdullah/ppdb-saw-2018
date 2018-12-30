@@ -11,7 +11,7 @@ require('function.php');
 	$nun_bing=!empty($_POST["nun_bing"])?($clean->bersih_angka($_POST["nun_bing"])):'0';
 	$akh=!empty($_POST["akhlak"])?($clean->bersih_angka($_POST["akhlak"])):'0';
 	$kepri=!empty($_POST["kepribadian"])?($clean->bersih_angka($_POST["kepribadian"])):'0';
-	$wwcara=!empty($_POST["wawanca"])?($clean->bersih_angka($_POST["wawanca"])):'0';
+	$wwcara=!empty($_POST["wawancara"])?($clean->bersih_angka($_POST["wawancara"])):'0';
 	$tpa=!empty($_POST["nilai_tpa"])?($clean->bersih_angka($_POST["nilai_tpa"])):'0';
 	
 	// IPA
@@ -27,6 +27,18 @@ require('function.php');
 // BAHASA INDONESIA
 	$aga6=!empty($_POST["aga6"])?($clean->bersih_angka($_POST["aga6"])):'0';
 	
+ /*	$nilai=$id_siswa."nun_mat".$nun_mat." ". 
+				 "nun_ipa".$nun_ipa." ". 
+				 "nun_ips".$nun_ips." ". 
+				 "nun_bing".$nun_bing." ". 
+				 "nun_bind".$nun_bind." ". 
+				 "tpa".$tpa." ". 
+				 "akh".$akh." ". 
+				 "kepri".$kepri." ". 
+				 "wwcara".$wwcara." ". 
+				 "ipa6".$ipa6."bing6 ".$bing6."bind6 ".$bind6." mat6 ".$mat6."aga6 ".$aga6;
+	print_r($nilai);
+*/
 	// query untuk cek nilai siswa apakah sudah ada dengan id siswa sekian
 	$sql0="select * from nilai where id_siswa=".$id_siswa;
 	$ceknilai=$koneksi->query($sql0);
@@ -60,17 +72,17 @@ require('function.php');
 			`kepribadian`,
 			`wawancara`,
 			 `datetime`) VALUES 
-				($id_siswa,
-				 ".$nun_mat.", 
+				(".$id_siswa.",".$nun_mat.", 
 				 ".$nun_ipa.", 
 				 ".$nun_ips.", 
 				 ".$nun_bing.", 
 				 ".$nun_bind.", 
+				 ".$ipa6.",".$ips6.", ".$bing6.", ".$bind6.", ".$mat6.", ".$aga6.",
 				 ".$tpa.", 
 				 ".$akh.", 
 				 ".$kepri.", 
 				 ".$wwcara.", 
-				 ".$ipa6.",".$ips6.", ".$bing6.", ".$bind6.", ".$mat6.", ".$aga6.",
+				 
 				NOW())";
 				// print_r($sql);
 			// query sql tersebut
