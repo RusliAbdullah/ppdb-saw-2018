@@ -123,7 +123,7 @@
                                 )
 
                             ORDER BY
-                                `a`.`aw` DESC LIMIT ".kuotaipa;
+                                `a`.`aw` DESC ";//LIMIT ".kuotaipa;
 
                             $query=$koneksi->query($sql);
                             // selama dalam variabel query terdapat data, maka tampilkan datanya
