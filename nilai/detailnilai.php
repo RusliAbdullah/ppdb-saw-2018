@@ -12,31 +12,7 @@
 
 <table class="table table-hover table-condensed table-striped datatables text-center table-sm">
 				<thead>
-					<!-- <tr>
 					
-						<th colspan="4" class="text-center text-danger" >NILAI UN</th>
-						<th colspan="6" class="text-center text-info" >NILAI RAPOR SEMESTER 6</th>
-						<th  class="text-center text-primary" >NILAI TPA</th>
-						<th colspan="3" class="text-center text-success" >NON AKADEMIK</th>
-						
-					</tr> 
-					 tr class="small">
-						<th class="text-center text-danger">MAT</th>
-						<th class="text-center text-danger">IPA</th>
-						<th class="text-center text-danger">BING</th>
-						<th class="text-center text-danger">BIND</th>
-						<th class="text-center text-info" >MAT</th>
-						<th class="text-center text-info">IPA</th>
-						<th class="text-center text-info">BING</th>
-						<th class="text-center text-info">BIND</th>
-						<th class="text-center text-info">IPS</th>
-						<th class="text-center text-info">AGAMA</th>
-						<th class="text-center text-primary">TPA</th>
-						<th class="text-center text-success">AKHLAK</th>
-						<th class="text-center text-success">KEPRIBADIAN</th>
-						<th class="text-center text-success">WAWANCARA</th>
-
-					</tr> -->
 					<th class="text-center text-danger">NMAT (C1)</th>
                         <th class="text-center text-danger">NBIND (C2)</th>
                         <th class="text-center text-danger">NIPA (C3)</th>
