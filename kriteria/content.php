@@ -12,6 +12,7 @@
 	 	  	// dapatkan  variabel $a dan $iddari url dengan fungsi GET
 	 	  	$a=!empty($_GET['a'])?htmlspecialchars(trim($_GET['a'])):'';
 	 	  	$id=!empty($_GET['id'])?htmlspecialchars(trim($_GET['id'])):'';
+	 	  	// $id_kriteria=!empty($_GET['id_kriteria'])?htmlspecialchars(trim($_GET['id_kriteria'])):'';
 	 	  
 	 	  	$sql="select * from kriteria";
 	 	  	if(isset($a)&&!empty($a)): 
@@ -32,16 +33,22 @@
 	 	  		 		break;
 	 	  		 	// fungsi save
 	 	  		 	case 'save':
-	 	  				$id_kriteria=!empty($_GET['id_kriteria'])?htmlspecialchars(trim($_GET['id_kriteria'])):'';
+	 	  				$id_kriteria=!empty($_POST['id_kriteria'])?htmlspecialchars(trim($_POST['id_kriteria'])):'';
 	 	  				// fungsi update
+	 	  				print_r($id_kriteria);
 	 	  				if(!empty($id_kriteria)||$id_kriteria!=null){
-	 	  		 			echo "update:".$id;
+	 	  		 			echo "update:".$id_kriteria;
+	 	  		 			include('update.php');
 	 	  				}else{
 	 	  					// fungsi save new
 	 	  		 			echo "save:".$id;
 	 	  		 			include('savenew.php');
 	 	  				}
-
+	 	  				?>
+	 	  				<div class="alert alert-success" role="alert">
+						    <strong>Peringatan!</strong>Data disimpan, klik  <a class="btn btn-info btn-sm" href="<?php echo 'kriteria.php' ?>">Data Kriteria</a>
+						</div>
+		 	  				<?php
 	 	  		 		break;
 	 	  		 		// fungsi delete
 	 	  		 	case 'del':
