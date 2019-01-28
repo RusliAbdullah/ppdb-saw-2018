@@ -2,6 +2,8 @@
 define('baseurl','http://ppdb.id/'); 
 define('kuotaipa','30'); 
 define('kuotaips','30'); 
+define('tahun','2018/2019'); 
+define('thn_akademik',array('2018'=>'2018/2019','2019'=>'2019/2020','2020'=>'2020/2021'))
 
 ?>
 <!DOCTYPE html>

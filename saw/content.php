@@ -8,7 +8,7 @@
  					<?php 
  						$a=!empty($_GET['a'])?htmlspecialchars(trim($_GET['a'])):'';
  						$s=!empty($_GET['s'])?htmlspecialchars(trim($_GET['s'])):'';
-						$sql="select * from siswa a join nilai b on a.id_siswa=b.id_siswa";
+						$sql="select * from siswa a join nilai b on a.id_siswa=b.id_siswa where a.thn_akademik='".tahun."'";
 	 	  				if(isset($a)&&!empty($a)): 
 	 	  					switch ($a) {
 	 	  						case 'proses':
