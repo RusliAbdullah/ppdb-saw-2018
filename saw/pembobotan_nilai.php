@@ -35,7 +35,7 @@
         <?php 
 					// query sql dari tabel siswa
                     // select 02-view-kriteria-alt
-                    $sql="SELECT * FROM `03-view-bobot`";
+                    $sql="SELECT * FROM `03-view-bobot` where thn_akademik='".tahun."'";;
 					$query=$koneksi->query($sql);
 					// selama dalam variabel query terdapat data, maka tampilkan datanya
 					$i=1;

@@ -3,6 +3,7 @@
 // require('function.php');
 	// $clean=new Fungsi();
 
+	$tahun=!empty($_POST["tahun"])?(($_POST["tahun"])):'';
 	$id_siswa=!empty($_POST["id_siswa"])?(($_POST["id_siswa"])):'';
 	$nama_siswa=!empty($_POST["nama_siswa"])?(($_POST["nama_siswa"])):'0';
 	$asal_sekolah=!empty($_POST["asal_sekolah"])?(($_POST["asal_sekolah"])):'0';
@@ -12,8 +13,8 @@
 	$alamat=!empty($_POST["alamat"])?(($_POST["alamat"])):'0';
 	$telp=!empty($_POST["telp"])?(($_POST["telp"])):'0';
 
-	$sql="INSERT INTO `siswa` (`asal_sekolah`, `nama_siswa`, `tmp_lahir`,`tgl_lahir`, `j_kelamin`, `alamat`, `telp`) 
-	VALUES ('".$asal_sekolah."', '".$nama_siswa."', '".$tmp_lahir."','".$tgl_lahir."', '".$j_kelamin."', '".$alamat."', '".$telp."');";
+	$sql="INSERT INTO `siswa` (`asal_sekolah`, `nama_siswa`, `tmp_lahir`,`tgl_lahir`, `j_kelamin`, `alamat`, `telp`, `thn_akademik`) 
+	VALUES ('".$asal_sekolah."', '".$nama_siswa."', '".$tmp_lahir."','".$tgl_lahir."', '".$j_kelamin."', '".$alamat."', '".$telp."', '".$tahun."');";
 	
 	$query=$koneksi->query($sql);
 		// jika hasil query sukses

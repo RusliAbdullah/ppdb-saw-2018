@@ -10,7 +10,7 @@
     <thead>
         <tr>
             <th>No.</th>
-            <th>ID</th>
+            <th>T.Akad</th>
             <th>Nama Siswa</th>
             <th>Asal Sekolah</th>
             <th>J.Kelamin</th>
@@ -32,7 +32,7 @@
                 <?= $i; ?>
             </td>
             <td>
-                <?= !empty($row['id_siswa'])?$row['id_siswa']:''; ?>
+                <?= !empty($row['thn_akademik'])?$row['thn_akademik']:''; ?>
             </td>
             <td>
                 <?= !empty($row['nama_siswa'])?$row['nama_siswa']:''; ?>

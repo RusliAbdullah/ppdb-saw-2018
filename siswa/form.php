@@ -1,5 +1,5 @@
  <?php if (!defined('baseurl')) exit('No direct script access allowed');?>
-
+<?php //print_r($data) ?>
 
 <form action="<?= !empty($data['action'])?$data['action']:'siswa.php?a=save&id=1234567' ?>" method="POST" role="form">
     <legend>Form Calon Siswa</legend>
@@ -7,6 +7,10 @@
     <input type="hidden" name="id_siswa" value="<?php echo (!empty($data['id_siswa'])?$data['id_siswa']:''); ?>">
     <div class="row">
         <div class="col-7">
+            <div class="form-group">
+                <label class="text-primary text-uppercase" for="tahun"><strong>Tahun Akademik (AUTO)</strong></label>
+                <input name="tahun" type="text" class="form-control" id="tahun" required readonly="true"placeholder="Masukkan Nama Siswa" value="<?php echo (!empty($data['thn_akademik'])?$data['thn_akademik']:tahun); ?>">
+            </div> 
             <div class="form-group">
                 <label class="text-primary text-uppercase" for="nama_siswa"><strong>Nama Siswa</strong></label>
                 <input name="nama_siswa" type="text" class="form-control" id="nama_siswa" required placeholder="Masukkan Nama Siswa" value="<?php echo (!empty($data['nama_siswa'])?$data['nama_siswa']:''); ?>">

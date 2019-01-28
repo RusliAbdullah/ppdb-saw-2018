@@ -48,8 +48,10 @@
                         cast(`a`.`wawancara` AS decimal(10,2)) as `c12`
                         
                     FROM
-                        `01-view-average-nilai` `a`";
-					$query=$koneksi->query($sql);
+                        `01-view-average-nilai` `a` where thn_akademik='".tahun."'";
+
+					// print_r($sql);
+                    $query=$koneksi->query($sql);
 					// selama dalam variabel query terdapat data, maka tampilkan datanya
 					$i=1;
                     // $ripa=$rips=$rmat=$raga=$bind=$bing=0;

@@ -49,6 +49,7 @@
     <tbody>
         <?php 
 					// query sql dari tabel siswa
+        print_r($sql);
 					$query=$koneksi->query($sql);
 					// selama dalam variabel query terdapat data, maka tampilkan datanya
 					$i=1;

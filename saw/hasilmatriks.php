@@ -55,7 +55,7 @@
                                         ) + `a`.`w9` + `a`.`w10` + `a`.`w11` + `a`.`w12` 
                                     ) as decimal(10,2)) AS `aw`
                                 FROM
-                                    `06-view-matrix-bobot-masuk` `a`";
+                                    `06-view-matrix-bobot-masuk` `a` where `a`.`thn_akademik`='".tahun."'";
 
                             $query=$koneksi->query($sql);
                             // selama dalam variabel query terdapat data, maka tampilkan datanya
@@ -111,7 +111,8 @@
                                 cast(`b`.`c10` AS decimal(10,2)) as `c10`,
                                 cast(`b`.`c11` AS decimal(10,2)) as `c11`,
                                 cast(`b`.`c12` AS decimal(10,2)) as `c12`,
-                                cast(`a`.`aw` AS decimal(10,2))  as `aw`
+                                cast(`a`.`aw` AS decimal(10,2))  as `aw`,
+                                `a`.`thn_akademik`
                             FROM
                                 (
                                     `07-view-alternative-weight-bobot-masuk` `a`
@@ -121,7 +122,7 @@
                                         )
                                     )
                                 )
-
+                                where `a`.`thn_akademik`='".tahun."' 
                             ORDER BY
                                 `a`.`aw` DESC ";//LIMIT ".kuotaipa;
 

@@ -54,12 +54,13 @@
                             cast((`a`.`c9` / `b`.`maxc9`) as decimal(10,2)) AS `rc9`,
                             cast((`a`.`c10` / `b`.`maxc10`) as decimal(10,2)) AS `rc10`,
                             cast((`a`.`c11` / `b`.`maxc11`) as decimal(10,2)) AS `rc11`,
-                            cast((`a`.`c12` / `b`.`maxc12`) as decimal(10,2)) AS `rc12`
+                            cast((`a`.`c12` / `b`.`maxc12`) as decimal(10,2)) AS `rc12`,
+                            `b`.`thn_akademik`
                         FROM
                             (
                                 `03-view-bobot` `a`
-                                JOIN `04-view-max-weight` `b`
-                            )";
+                                JOIN `04-view-max-weight` `b` on `a`.`thn_akademik`=`b`.`thn_akademik`
+                            ) where `b`.`thn_akademik`='".tahun."'";
 
 					$query=$koneksi->query($sql);
 					// selama dalam variabel query terdapat data, maka tampilkan datanya

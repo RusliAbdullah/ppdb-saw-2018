@@ -37,7 +37,7 @@
         <?php 
 					// query sql dari tabel siswa
                     // select 02-view-kriteria-alt
-                    $sql="SELECT * FROM `04-view-max-weight`";
+                    $sql="SELECT * FROM `04-view-max-weight` where thn_akademik='".tahun."'";
 					$query=$koneksi->query($sql);
 					// selama dalam variabel query terdapat data, maka tampilkan datanya
 					$i=1;

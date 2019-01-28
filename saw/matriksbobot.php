@@ -56,12 +56,14 @@
                             cast((`a`.`rc9` * `b`.`wc9`) as decimal(10,2)) AS `w9`,
                             cast((`a`.`rc10` * `b`.`wc10`) as decimal(10,2)) AS `w10`,
                             cast((`a`.`rc11` * `b`.`wc11`) as decimal(10,2)) AS `w11`,
-                            cast((`a`.`rc12` * `b`.`wc12`) as decimal(10,2)) AS `w12`
+                            cast((`a`.`rc12` * `b`.`wc12`) as decimal(10,2)) AS `w12`,
+                            `a`.`thn_akademik`
                         FROM
                             (
                                 `05-view-normalisasi-weighted` `a`
-                                JOIN `05-view-bobot-masuk-weight` `b`
-                            )";
+                                JOIN `05-view-bobot-masuk-weight` b
+
+                            ) where `a`.`thn_akademik`='".tahun."'";
 
 					$query=$koneksi->query($sql);
 					// selama dalam variabel query terdapat data, maka tampilkan datanya
